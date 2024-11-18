@@ -51,7 +51,7 @@ const ContentSection = () => {
             Empowering Your Immigration Journey<br /> with Expertise
           </h1>
           <p>
-            Whether you're exploring work opportunities, study programs, or family reunification abroad, we provide the expert guidance needed to navigate complex immigration processes and ensure your success.
+            Whether you&apos;re exploring work opportunities, study programs, or family reunification abroad, we provide the expert guidance needed to navigate complex immigration processes and ensure your success.
           </p>
           <ul className="space-y-4">
             {["Personalized Visa Consultation", 

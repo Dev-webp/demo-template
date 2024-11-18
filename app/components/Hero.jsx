@@ -6,12 +6,12 @@ import { useState } from 'react'
  
 const Navbar = () => {
 const [navIsOpened, setNavIsOpened] = useState(false)
-const closeNavbar = () => {
-setNavIsOpened(false)
-}
-const toggleNavbar = () => {
-setNavIsOpened(navIsOpened => !navIsOpened)
-}
+// const closeNavbar = () => {
+// setNavIsOpened(false)
+// }
+// const toggleNavbar = () => {
+// setNavIsOpened(navIsOpened => !navIsOpened)
+// }
 return (
 <>
   {/* <div aria-hidden={true} onClick={() => {

@@ -1,4 +1,4 @@
-import { FaPassport, FaFileAlt, FaGlobe, FaHandshake } from "react-icons/fa";
+import { FaPassport, FaFileAlt, FaGlobe } from "react-icons/fa";
 
 export const hitFeatures = [
   {
