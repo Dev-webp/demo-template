@@ -6,17 +6,39 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ContentSection = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 }); // triggerOnce set to false
 
-  // Animation variants for Framer Motion
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.3 } },
+  // Animation variants for content
+  const contentVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.5, // Delays each child animation
+      },
+    },
   };
 
+  // Animation variants for individual items
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 },
+    },
+  };
+
+  // Animation variants for the image
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.8, delay: 1.3 }, // Delayed start
+    },
   };
 
   return (
@@ -24,13 +46,12 @@ const ContentSection = () => {
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      variants={containerVariants}
       className="py-10"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row-reverse gap-16 py-10 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50">
         {/* Image Section */}
         <motion.div
-          variants={itemVariants}
+          variants={imageVariants} // Use the image-specific variants
           className="flex md:flex-1"
         >
           <Image
@@ -44,19 +65,24 @@ const ContentSection = () => {
 
         {/* Content Section */}
         <motion.div
-          variants={itemVariants}
+          variants={contentVariants} // Use the content-specific variants
           className="md:w-1/2 space-y-12 text-gray-700 dark:text-gray-300"
         >
-          <h1 className="text-gray-900 dark:text-white uppercase font-semibold text-2xl sm:text-3xl md:text-[2.50rem]">
+          <motion.h1
+            variants={itemVariants} // Fade-in effect for each item
+            className="text-gray-900 dark:text-white uppercase font-semibold text-2xl sm:text-3xl md:text-[2.50rem]"
+          >
             Your Trusted Partner in Immigration and Relocation
-          </h1>
-          <p>
+          </motion.h1>
+          <motion.p variants={itemVariants}>
             From skilled work visas to permanent residency, our team is dedicated to helping you secure a future abroad with ease and confidence. Let us guide you every step of the way through the complexities of the immigration process.
-          </p>
-          <ul className="space-y-4">
-            {["Comprehensive Work Visa Solutions", 
-              "Family Sponsorship and Reunification Services", 
-              "Assistance with Citizenship and Residency Applications"].map((item, index) => (
+          </motion.p>
+          <motion.ul variants={contentVariants} className="space-y-4">
+            {[  
+              "Comprehensive Work Visa Solutions",
+              "Family Sponsorship and Reunification Services",
+              "Assistance with Citizenship and Residency Applications",
+            ].map((item, index) => (
               <motion.li
                 key={index}
                 variants={itemVariants}
@@ -68,9 +94,12 @@ const ContentSection = () => {
                 {item}
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
           <motion.div variants={itemVariants} className="flex">
-            <Link href="#" className="px-5 h-11 flex items-center bg-orange-500 dark:bg-blue-500 rounded-lg text-white">
+            <Link
+              href="#"
+              className="px-5 h-11 flex items-center bg-orange-500 dark:bg-blue-500 rounded-lg text-white"
+            >
               Start Your Immigration Journey Today
             </Link>
           </motion.div>

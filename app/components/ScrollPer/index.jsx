@@ -43,6 +43,37 @@ const Section1 = ({ scrollYProgress }) => {
       rotate,
       transformOrigin, // Apply transform origin to center the scaling
     }} >
+      
+      <Features/>
+    </motion.div>
+  );
+}
+
+const Section2 = ({ scrollYProgress }) => {
+  // Adding a skew effect, translate, and opacity for a more dynamic animation
+  const scale = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0.5, 1], [10, 0]); // Skew-like rotation
+  const opacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+  const translateY = useTransform(scrollYProgress, [0.5, 1], [50, 0]);
+
+  return (
+    <motion.div
+      style={{
+        scale,
+        rotate,
+        opacity,
+        y: translateY, // Translate along Y-axis
+        transformOrigin: "center", // Scale and rotate around the center
+      }}
+      className="section2-container" // Optional for additional styling
+    >
+      <About />
+    </motion.div>
+  );
+};
+
+
+
       {/* <p>Scroll Perspective</p>
       <div className="section1-content">
         <p>Section</p>
@@ -56,25 +87,10 @@ const Section1 = ({ scrollYProgress }) => {
         </div>
         <p>Transition</p>
       </div> */}
-      
-      <Features/>
-    </motion.div>
-  );
-}
 
-const Section2 = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 0]);
-
-  return (
-    <motion.div style={{ scale, rotate }} >
       {/* <Image
         src={Pic2}
         alt="img"
         placeholder="blur"
         fill
       /> */}
-      <About/>
-    </motion.div>
-  );
-}
