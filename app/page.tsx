@@ -7,7 +7,7 @@ import Footer from "@/app/components/Footer";
 import Two from "@/app/components/2/Index";
 import Blog from "@/app/components/Blog";
 import CTA from "@/app/components/CTA";
-
+ 
 // Dynamic Imports
 const ScrollPer = React.lazy(() => import('@/app/components/ScrollPer/index'));
 const Parallex = React.lazy(() => import('@/app/components/Parallex/parallex'));

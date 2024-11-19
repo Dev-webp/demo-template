@@ -26,7 +26,7 @@ return (
 const posts = [
     {
       id: 1,
-      cover: "/b2.jpg", // Replace with your image path
+      cover: "/b2.webp", // Replace with your image path
       published_at: "Nov, 10, 2024",
       title: "Top Tips for a Successful Visa Application",
       sumary:
@@ -34,7 +34,7 @@ const posts = [
     },
     {
       id: 2,
-      cover: "/b3.jpg", // Replace with your image path
+      cover: "/b3.webp", // Replace with your image path
       published_at: "Nov, 15, 2024",
       title: "Why Studying Abroad is the Best Decision for Your Career",
       sumary:

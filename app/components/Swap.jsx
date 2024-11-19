@@ -55,7 +55,7 @@ const ContentSection = () => {
           className="flex md:flex-1"
         >
           <Image
-            src="/b2.jpg"
+            src="/b2.webp"
             alt="Immigration support services"
             width={1300}
             height={900}

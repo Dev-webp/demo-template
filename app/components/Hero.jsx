@@ -69,12 +69,12 @@ return (
         <Link href="#" className="text-xl font-semibold flex items-center gap-x-2">
         <span className="flex">
   <img
-    src="/logo-1.png"
+    src="/logo-1.webp"
     alt="Logo 1"
     className="w-16 h-auto object-contain" // Adjust width/height as needed
   />
   <img
-    src="logo-2.png"
+    src="logo-2.webp"
     alt="Logo 2"
     className="w-24 h-auto object-contain" // Adjust width/height and margin as needed
   />
@@ -282,7 +282,7 @@ export default function HeroSection() {
 
             <div className="w-3/5 h-[80%] rounded-3xl overflow-clip border-8 border-gray-200 dark:border-gray-950 z-10 ml-60 mt-10">
               <Image
-                src="/1.jpg"
+                src="/1.webp"
                 alt="building plan image"
                 width={1300}
                 height={1300}
