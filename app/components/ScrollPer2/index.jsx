@@ -2,11 +2,9 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from 'lenis';
-import './page.css'; // Import the CSS file (only for .main-container)
+import './page.css'; // Import the CSS file
 import About from "@/app/components/About";
 import Features from "../Features";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Home() {
   const container = useRef();
@@ -34,74 +32,45 @@ export default function Home() {
   );
 }
 
-
-const Section1 = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // GSAP ScrollTrigger animation
-    gsap.fromTo(
-      sectionRef.current,
-      {
-        opacity: 0,
-        scale: 1.2,
-        rotationX: 90,
-        x: -200,
-        y: 100,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        rotationX: 0,
-        x: 0,
-        y: 0,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 90%", // Start animation when 80% of the section is visible
-          end: "bottom 20%", // End animation when 20% of the section is visible
-          scrub: true, // Link animation progress to scroll position
-          markers: false, // Remove scroll markers
-        },
-      }
-    );
-  }, []);
+const Section1 = ({ scrollYProgress }) => {
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -0]);
+  const transformOrigin = "center"; // Ensures scaling happens from the center
 
   return (
-    <div
-      ref={sectionRef}
-      className="section1 flex justify-center items-center p-10"
-    >
-      <Features />
-    </div>
+    <motion.div style={{
+      scale,
+      rotate,
+      transformOrigin, // Apply transform origin to center the scaling
+    }} >
+      
+      <Features/>
+    </motion.div>
   );
-};
-
-
+}
 
 const Section2 = ({ scrollYProgress }) => {
-  // Improved animations
-  const scale = useTransform(scrollYProgress, [0.5, 1], [0.9, 1]); // Subtle zoom-in effect
-  const translateY = useTransform(scrollYProgress, [0.5, 1], [100, 0]); // Slide-up effect
-  const opacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]); // Fade-in effect
+  // Adding a skew effect, translate, and opacity for a more dynamic animation
+  const scale = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0.5, 1], [0, 0]); // Skew-like rotation
+  const opacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+  const translateY = useTransform(scrollYProgress, [0.5, 1], [0, 0]);
 
   return (
     <motion.div
       style={{
         scale,
-        y: translateY,
+        rotate,
         opacity,
-        transformOrigin: "center", // Transform centered
+        y: translateY, // Translate along Y-axis
+        transformOrigin: "center", // Scale and rotate around the center
       }}
-      className="flex justify-center items-center py-20 px-10 bg-gradient-to-b from-gray-200 to-gray-100" // Tailwind classes for layout and background
+      className="section2-container" // Optional for additional styling
     >
-      <div className="max-w-6xl text-center">
-        <About />
-      </div>
+      <About />
     </motion.div>
   );
 };
+
 
 

@@ -57,7 +57,7 @@ const ServiceSection = () => {
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                className={`relative rounded-lg border bg-white dark:bg-gray-950 p-6 sm:p-10 space-y-6 hover:shadow-md hover:border-gray-200 dark:hover:border-gray-800 dark:hover:shadow-transparent hover:-translate-y-2 transition duration-300 ${
+                className={`relative rounded-lg border bg-white dark:bg-gray-950 p-6 sm:p-10 space-y-6 shadow-xl hover:shadow-2xl hover:border-gray-200 dark:hover:border-gray-800 dark:hover:shadow-transparent hover:-translate-y-2 transition duration-300 ${
                   service.recommended
                     ? "bg-gray-100 dark:bg-gray-900 shadow-gray-200/40"
                     : "shadow-transparent"

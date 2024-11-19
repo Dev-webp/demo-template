@@ -33,7 +33,7 @@ export default function Home() {
 }
 
 const Section1 = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -0]);
   const transformOrigin = "center"; // Ensures scaling happens from the center
 
@@ -52,9 +52,9 @@ const Section1 = ({ scrollYProgress }) => {
 const Section2 = ({ scrollYProgress }) => {
   // Adding a skew effect, translate, and opacity for a more dynamic animation
   const scale = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0.5, 1], [10, 0]); // Skew-like rotation
+  const rotate = useTransform(scrollYProgress, [0.5, 1], [0, 0]); // Skew-like rotation
   const opacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
-  const translateY = useTransform(scrollYProgress, [0.5, 1], [50, 0]);
+  const translateY = useTransform(scrollYProgress, [0.5, 1], [0, 0]);
 
   return (
     <motion.div

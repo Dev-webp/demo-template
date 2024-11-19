@@ -8,7 +8,7 @@ return (
             <Image width={ 1000 } height={600} src={cover} className="rounded-[7px] aspect-[4/2.8] w-full object-cover" alt="image article" />
         </div>
         <div className="flex flex-col p-5 relative space-y-4">
-            <h1 className="text-xl/tight font-semibold text-gray-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-500">
+            <h1 className="text-xl/tight font-semibold text-gray-800 dark:text-white group-hover:text-orange-500 dark:group-hover:text-blue-500">
                 {title}
             </h1>
             <p className="text-gray-700 dark:text-gray-300 line-clamp-2">{sumary}</p>
@@ -24,21 +24,23 @@ return (
 }
  
 const posts = [
-{
-    id: 1,
-    cover: "/b1.jpg",
-    published_at: "Jun, 12, 2021",
-    title: "How to Sructure your reactJs Application like a Legend ",
-    sumary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error magni ipsam earum "
-},
-{
-    id: 2,
-    cover: "/b1.jpg",
-    published_at: "Jun, 12, 2021",
-    title: "You're probably fetching data in the wrong way",
-    sumary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error magni ipsam earum "
-},
-]
+    {
+      id: 1,
+      cover: "/b2.jpg", // Replace with your image path
+      published_at: "Nov, 10, 2024",
+      title: "Top Tips for a Successful Visa Application",
+      sumary:
+        "Learn how to navigate the visa process effectively with these essential tips and guidelines for success.",
+    },
+    {
+      id: 2,
+      cover: "/b3.jpg", // Replace with your image path
+      published_at: "Nov, 15, 2024",
+      title: "Why Studying Abroad is the Best Decision for Your Career",
+      sumary:
+        "Explore the career and personal growth opportunities that come with studying abroad and how to start your journey.",
+    },
+  ];
  
  
 const BlogSection = () => {
@@ -46,10 +48,9 @@ return (
     <section className="py-20">
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-14">
             <div className="text-center space-y-6 max-w-2xl mx-auto">
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white capitalize">Our most recent Articles</h1>
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-white uppercase">Latest Immigration Insights</h1>
                 <p className="text-gray-700 dark:text-gray-300">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit perferendis eos amet eum repudiandae
-                    aspernatur mollitia quos consectetur voluptatibus pariatur
+                Stay informed with our latest articles covering visa processes, study abroad opportunities, and expert tips to achieve your global aspirations.
                 </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-t-lg">
@@ -64,16 +65,16 @@ return (
                     <div className="absolute w-14 h-14 rounded-full bg-gradient-to-bl from-blue-600 to-violet-500 blur-2xl z-10 -bottom-7 -right-7 opacity-40">
                     </div>
                     <div className="lg:h-full flex flex-col items-center text-center justify-center space-y-5 mx-auto max-w-2xl">
-                        <h1 className="font-bold text-gray-900 dark:text-white text-3xl">
-                            Join other <span className="text-transparent bg-clip-text bg-gradient-to-bl from-blue-700 to-violet-400 dark:from-blue-300 dark:to-violet-400">600 Amazing</span> developers
+                        <h1 className="font-bold text-gray-900 dark:text-white text-3xl uppercase">
+                            Join other <span className="text-transparent bg-clip-text bg-gradient-to-bl from-orange-700 to-orange-400 dark:from-blue-300 dark:to-violet-400">thousands of happy clients </span>
                         </h1>
                         <p className="text-gray-700 dark:text-gray-300 text-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, rem eius dicta
+                        Discover how our expertise has helped countless individuals achieve their dreams of living, working, or studying abroad.
                         </p>
-                        <form action className="w-full flex flex-col sm:items-center sm:flex-row lg:flex-col gap-y-3 gap-x-4">
+                        <form  className="w-full flex flex-col sm:items-center sm:flex-row lg:flex-col gap-y-3 gap-x-4">
                             <input type="email" className="py-3 px-5 rounded-lg text-gray-800 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 outline-none w-full placeholder:text-gray-600 dark:placeholder:text-gray-300" placeholder="johndoe@gmail.com" />
                             <div className="flex justify-center w-full sm:w-max lg:w-full">
-                                <button className="py-3 rounded-lg px-6 bg-blue-600 dark:bg-blue-500 text-white font-medium text-base w-full flex justify-center">Subscribe</button>
+                                <button className="py-3 rounded-lg px-6 bg-orange-500 dark:bg-blue-500 text-white font-medium text-base w-full flex justify-center">Subscribe</button>
                             </div>
                         </form>
                     </div>
