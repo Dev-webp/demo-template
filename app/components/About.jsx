@@ -67,7 +67,7 @@ const ContentSection = () => {
           </motion.h1>
 
           <motion.p variants={itemVariants}>
-            Whether you're exploring work opportunities, study programs, or family reunification abroad, we provide the expert guidance needed to navigate complex immigration processes and ensure your success.
+            Whether you&apos;re exploring work opportunities, study programs, or family reunification abroad, we provide the expert guidance needed to navigate complex immigration processes and ensure your success.
           </motion.p>
 
           <motion.ul variants={contentVariants} className="space-y-4 text-left">

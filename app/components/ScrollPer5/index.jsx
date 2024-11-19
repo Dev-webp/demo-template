@@ -1,5 +1,6 @@
 'use client';
-import { useScroll, useTransform, motion } from "framer-motion";
+// import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from 'lenis';
 import './page.css'; // Import the CSS file (only for .main-container)
