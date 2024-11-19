@@ -35,7 +35,7 @@ export default function Home() {
     <ScrollPer/>
     <div className='h-[5rem]'></div>
     <ScrollPer4/>
-    <div className='h-[19rem]'></div>
+    <div className='h-[39rem]'></div>
     <ScrollPer2/>
     <div className='h-[30rem]'></div>
     <ScrollPer3/>

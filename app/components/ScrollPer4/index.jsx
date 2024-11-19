@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import './page.css'; // Import custom styles
 import Features from "../Features"; // Assuming Features is your desired component
+import { FaGraduationCap, FaBriefcase, FaHome, FaUserFriends, FaGlobe, FaFileAlt } from "react-icons/fa";
 
 export default function Home() {
   const container = useRef();
@@ -77,28 +78,64 @@ export default function Home() {
       </section>
 
       {/* Section 2 */}
+      
+
       <section className="section2 flex flex-col items-center py-20 bg-gray-100">
-        <div className="section2-content max-w-6xl text-center mb-10">
-          <h2 className="text-4xl font-bold text-gray-800">Dynamic Features</h2>
-          <p className="text-lg text-gray-600 mt-4">
-            Discover powerful features that bring life to your experience.
-          </p>
+  <div className="section2-content max-w-6xl text-center mb-10">
+    <h2 className="text-4xl font-bold text-gray-800 uppercase">Our Expert Services</h2>
+    <p className="text-lg text-gray-600 mt-4">
+      Comprehensive solutions to make your visa and immigration process seamless and hassle-free.
+    </p>
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      {
+        title: "Study Visa Assistance",
+        description: "Guidance to help you secure a student visa and achieve your academic goals abroad.",
+        icon: <FaGraduationCap />,
+      },
+      {
+        title: "Work Visa Consultancy",
+        description: "Expert advice for obtaining work permits to unlock your international career opportunities.",
+        icon: <FaBriefcase />,
+      },
+      {
+        title: "Permanent Residency",
+        description: "Support in securing permanent residency for a stable future in your chosen country.",
+        icon: <FaHome />,
+      },
+      {
+        title: "Family Visa Services",
+        description: "Reunite with your loved ones by obtaining family visas with our dedicated support.",
+        icon: <FaUserFriends />,
+      },
+      {
+        title: "Tourist Visa Guidance",
+        description: "Simplify the process of obtaining tourist visas to explore the world effortlessly.",
+        icon: <FaGlobe />,
+      },
+      {
+        title: "Immigration Appeals",
+        description: "Professional help for handling visa rejections and filing successful appeals.",
+        icon: <FaFileAlt />,
+      },
+    ].map((service, index) => (
+      <div
+        key={index}
+        className="section2-feature bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition"
+      >
+        <div className="w-16 h-16 flex items-center justify-center bg-orange-100 text-orange-500 rounded-xl mb-4 text-3xl">
+          {service.icon}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-          {["Feature 1", "Feature 2", "Feature 3"].map((feature, index) => (
-            <div
-              key={index}
-              className="section2-feature bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition"
-            >
-              <h3 className="text-xl font-semibold">{feature}</h3>
-              <p className="text-gray-600 mt-2">
-                Explore the benefits and power of this feature.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <h3 className="text-xl font-semibold">{service.title}</h3>
+        <p className="text-gray-600 mt-2">{service.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
     </main>
   );
 }
