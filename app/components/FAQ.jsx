@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const FAQComponent = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery ] = useState("");
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqData = [
