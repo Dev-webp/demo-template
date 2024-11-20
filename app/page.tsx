@@ -11,7 +11,7 @@ const Parallex = React.lazy(() => import('@/app/components/Parallex/parallex'));
 const Scroll = React.lazy(() => import('@/app/components/Scroll/index'));
 const Two = React.lazy(() => import('@/app/components/2/Index'));
 const CTA = React.lazy(() => import('@/app/components/CTA'));
-const FAQ = React.lazy(() => import('@/app/components/FAQ'));
+// const FAQ = React.lazy(() => import('@/app/components/FAQ'));
 const Price = React.lazy(() => import('@/app/components/Price'));
 const Blog = React.lazy(() => import('@/app/components/Blog'));
 
@@ -41,7 +41,7 @@ export default function Home() {
           <h1 className="text-[2.75rem] font-semibold uppercase text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight text-center mt-10">What Our <br/> Customers Say</h1>
         <Parallex /> </div>
         <Blog />
-        <FAQ />
+        {/* <FAQ /> */}
       </Suspense>
       
       <Footer />
