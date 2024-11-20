@@ -141,7 +141,7 @@ export default function HeroSection() {
   return (
     <>
       <Navbar />
-      <section className="py-4 lg:py-0 mt-14 sm:mt-16 lg:mt-0 bg-gradient-to-bl from-white to-orange-50">
+      <section className="py-4 lg:py-0 mt-2 md:mt-0 lg:mt-0 bg-gradient-to-bl from-white to-white">
         <motion.div
           variants={containerVariants(0.2)}
           initial="offscreen"
@@ -192,11 +192,11 @@ export default function HeroSection() {
             variants={containerVariants(0.8)}
             initial="offscreen"
             animate="onscreen"
-            className="flex aspect-square lg:aspect-auto lg:h-[35rem] relative mt-6"
+            className="flex aspect-square lg:aspect-auto lg:h-[35rem] relative mt-8 md:mt-6 lg:mt-6"
           >
             <motion.div
               variants={containerVariants(1)}
-              className="absolute right-28 bottom-28 h-[calc(80%-10px)] w-4/5 rounded-3xl overflow-hidden border-4 border-gray-200 dark:border-gray-800 z-30 p-6 bg-white dark:bg-gray-900 shadow-2xl "
+              className="absolute right-10 lg:right-28 bottom-0 lg:bottom-28  h-[calc(128%-90px)]  lg:h-[calc(80%-10px)] w-4/5 rounded-3xl overflow-hidden border-4 border-gray-200 dark:border-gray-800 z-30 p-6 bg-white dark:bg-gray-900 shadow-2xl "
             >
               <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2 uppercase text-center">
                 Sign Up & Get Free Assistance
@@ -242,19 +242,6 @@ export default function HeroSection() {
     />
   </div>
 
-  {/* <div>
-  <label htmlFor="text" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-    Message
-  </label>
-  <textarea
-    id="text"
-    rows="2"
-    className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-orange-600 dark:bg-gray-800 dark:text-gray-300 hover:border-orange-500 transition-all duration-300"
-    placeholder="Your Message" // Ensure there's no unwanted text or slashes here
-  
-  ></textarea>
-</div> */}
-
   <div>
     <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
       Message
@@ -291,7 +278,7 @@ export default function HeroSection() {
             </div>
 
             <motion.div
-              className="absolute -bottom-10 -right-10 w-64 h-64 bg-orange-600 rounded-full opacity-20"
+              className="absolute bottom-[20rem] lg:-bottom-10 -right-10 w-64 h-64 bg-orange-600 rounded-full opacity-20"
               animate={{ y: [0, -30, 0], x: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
             />
@@ -300,13 +287,13 @@ export default function HeroSection() {
 
         <div className="relative z-0">
           <motion.div
-            className="absolute -top-[40rem] -left-10 w-40 h-40 bg-orange-500 rounded-full opacity-20"
+            className="absolute -top-[62rem] lg:-top-[40rem] -left-10 w-40 h-40 bg-orange-500 rounded-full opacity-20"
             animate={{ y: [0, 30, 0], x: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
           />
         
           <motion.div
-            className="absolute -bottom-10 -left-10 w-64 h-64 bg-orange-500 rounded-full opacity-20"
+            className="absolute bottom-10 lg:-bottom-10 -left-10 w-64 h-64 bg-orange-500 rounded-full opacity-20"
             animate={{ y: [0, -30, 0], x: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           />

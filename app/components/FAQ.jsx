@@ -38,7 +38,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="faq-container p-8 bg-white rounded-lg shadow-xl w-full max-w-3xl mx-auto mt-12">
+    <div className="faq-container p-8 bg-white rounded-lg shadow-xl w-full max-w-3xl mx-auto mt-12" >
       <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">
         Frequently Asked Questions
       </h2>

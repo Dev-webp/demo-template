@@ -73,23 +73,3 @@ const Section2 = ({ scrollYProgress }) => {
 
 
 
-      {/* <p>Scroll Perspective</p>
-      <div className="section1-content">
-        <p>Section</p>
-        <div className="image-container">
-          <Image
-            src={Pic1}
-            alt="img"
-            placeholder="blur"
-            fill
-          />
-        </div>
-        <p>Transition</p>
-      </div> */}
-
-      {/* <Image
-        src={Pic2}
-        alt="img"
-        placeholder="blur"
-        fill
-      /> */}

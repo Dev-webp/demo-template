@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ServiceSection = () => {
   return (
-    <section className="py-20 ">
+    <section className="py-20 " style={{ backgroundImage: 'url(/subtle-prism.png)' }}>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

@@ -1,4 +1,4 @@
-'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { useTransform, useScroll, motion } from 'framer-motion';
@@ -49,9 +49,16 @@ export default function Parallex() {
 const Column = ({ y }) => {
   return (
     <motion.div className={styles.column} style={{ y }}>
-      <div className={styles.gridItem}></div>
-      <div className={styles.gridItem}></div>
-      <div className={styles.gridItem}></div>
+      <div className={styles.gridItem}>
+        {/* <p className={styles.text}>Text 1</p> */}
+      </div>
+      <div className={styles.gridItem}>
+        {/* <p className={styles.text}>Text 2</p> */}
+      </div>
+      <div className={styles.gridItem}>
+        {/* <p className={styles.text}>Text 3</p> */}
+      </div>
     </motion.div>
   );
 };
+

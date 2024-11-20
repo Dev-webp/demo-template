@@ -11,7 +11,7 @@ return (
 const FooterBlockItem = ({ title, items }) => {
 return (
     <div className="space-y-6">
-        <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+        <h1 className="text-lg font-semibold text-gray-100 dark:text-gray-100">
             {title}
         </h1>
         <ul className="space-y-3">
@@ -121,7 +121,7 @@ const footerBlocks = [
 },
 {
     id: 4,
-    title: "Ressources",
+    title: "Resources",
     items: [
         {
             id: 1,
@@ -150,13 +150,16 @@ const footerBlocks = [
  
 const FooterBlock = () => {
 return (
-    <footer className="bg-white dark:bg-gray-950 text-gray-700 dark:text-gray-300">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-gray-300 dark:text-gray-300"   >
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5  py-20 flex flex-col lg:flex-row gap-14">
-            <div className="space-y-6 lg:w-96">
-                <Link href="#">
-                    <span className="text-black font-bold text-2xl"> VJC OVERSEAS</span>
-                   
-                </Link>
+            <div className="space-y-3 lg:w-96">
+            <Link href="#">
+  <div className="flex items-center gap-2">
+    <img src="/favicon.png" alt="Logo" className="w-8 h-8" /> {/* Replace with your image path */}
+    <span className="text-gray-100 font-bold text-2xl">VJC OVERSEAS</span>
+  </div>
+</Link>
+
                 <p className="max-w-lg">
                     Crafting Solutions with Precision and Expertise
                 </p>
@@ -191,10 +194,10 @@ return (
                 }
             </nav>
         </div>
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-5">
-            <div className="py-3 border-t border-t-gray-100 dark:border-t-gray-900 flex flex-col md:flex-row md:justify-between gap-6 md:items-center">
-                <div className="max-w-md text-gray-700 dark:text-gray-300 space-y-3">
-                    <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-5 bg-black">
+            <div className="py-3 border-t border-t-gray-500 dark:border-t-gray-900 flex flex-col md:flex-row md:justify-between gap-6 md:items-center">
+                <div className="max-w-md text-gray-300 dark:text-gray-300 space-y-3">
+                    <h2 className="text-lg font-semibold text-gray-100 dark:text-gray-100">
                         Join our news-letter
                     </h2>
                     <p>
@@ -210,9 +213,9 @@ return (
                     </form>
                 </div>
             </div>
-            <div className="px-5 sm:px-10 md:px-12 lg:px-5 flex justify-center text-center py-3 bg-gray-100 dark:bg-gray-900 rounded-md">
+            {/* <div className="px-5 sm:px-10 md:px-12 lg:px-5 flex justify-center text-center py-3 bg-gray-100 dark:bg-gray-900 rounded-md">
                 <p> © 2024. All right reserved </p>
-            </div>
+            </div> */}
         </div>
     </footer>
 )

@@ -60,7 +60,7 @@ const services = [
 
 const Features = () => {
   return (
-    <section className="py-10">
+    <section className="py-10" style={{ backgroundImage: 'url(/subtle-prism-2.png)' }}>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col items-start gap-10 xl:gap-14">
         <div className="flex flex-col gap-5">
           <div className="space-y-4 max-w-4xl">

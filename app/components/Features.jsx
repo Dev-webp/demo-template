@@ -74,7 +74,8 @@ const Features = () => {
   });
 
   return (
-    <section className="py-10">
+    <section className="py-10" style={{ backgroundImage: 'url(/subtle-prism.png)' }}>
+      {/* style={{ backgroundImage: 'url(/subtle-prism.png)' }} */}
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <div className="flex flex-col space-y-10">
           {/* Heading section with animations */}
