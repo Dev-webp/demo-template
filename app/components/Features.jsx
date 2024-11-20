@@ -49,9 +49,9 @@ const FeatureCard = ({ title, description, icon }) => {
       initial={{ opacity: 0, y: 20, scale: 0.95 }} // Start with hidden, slightly below, and smaller
       whileInView={{ opacity: 1, y: 0, scale: 1 }} // Animate to fully visible, at the original position, and original scale
       transition={{
-        opacity: { duration: 0.6 },
+        opacity: { duration: 0.2 },
         y: { type: 'spring', stiffness: 100, damping: 25 }, // More natural slide-up
-        scale: { duration: 0.5 }, // Quick scale effect
+        scale: { duration: 0.2 }, // Quick scale effect
       }}
     >
       <span className="p-2 rounded-md bg-blue-50 text-orange-500 dark:bg-gray-900 dark:text-blue-500 flex w-max">
@@ -70,7 +70,7 @@ const FeatureCard = ({ title, description, icon }) => {
 const Features = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger the animation only once when the component is first visible
-    threshold: 0.2, // Trigger when 20% of the component is in view
+    threshold: 0.1, // Trigger when 20% of the component is in view
   });
 
   return (
@@ -83,8 +83,8 @@ const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.6,
-              delay: 0.2, // Slight delay for the heading animation
+              duration: 0.2,
+              // delay: 0.1, 
               type: 'spring',
               stiffness: 100,
               damping: 25
@@ -96,8 +96,8 @@ const Features = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 0.6,
-                delay: 0.4,
+                duration: 0.2,
+                // delay: 0.1,
               }}
             >
               Features
@@ -109,8 +109,8 @@ const Features = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.7,
-                delay: 0.6,
+                duration: 0.4,
+                // delay: 0.6,
                 type: 'spring',
                 stiffness: 120,
                 damping: 30,
@@ -125,8 +125,8 @@ const Features = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.7,
-                delay: 0.8,
+                duration: 0.4,
+                // delay: 0.2,
                 type: 'spring',
                 stiffness: 120,
                 damping: 30,
@@ -142,7 +142,7 @@ const Features = () => {
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 sm:gap-y-16 sm:gap-x-12"
             initial={{ opacity: 0 }}  // Start with the grid section hidden
             animate={inView ? { opacity: 1 } : { opacity: 0 }}  // Fade in when it's in view
-            transition={{ duration: 0.6, staggerChildren: 0.2 }} // Staggered animation for child elements
+            transition={{ duration: 0.2, staggerChildren: 0.2 }} // Staggered animation for child elements
           >
             {features.map((feature, index) => (
               <motion.div key={feature.id} custom={index}>

@@ -28,7 +28,7 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <ScrollPer />
       </Suspense>
-      <div className="h-36"></div>
+      <div className="h-60"></div>
       <Suspense fallback={<div>Loading...</div>}>
         <Scroll />
       </Suspense>

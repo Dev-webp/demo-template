@@ -11,7 +11,7 @@ const contentVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Sequential animations for children
+      staggerChildren: 0.1, // Sequential animations for children
     },
   },
 };
@@ -19,7 +19,7 @@ const contentVariants = {
 // Variants for individual content items
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
 // Variants for the image (delayed until content is fully visible)
@@ -28,12 +28,12 @@ const imageVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.8, delay: 1 }, // Delays after content fades in
+    transition: { duration: 0.4, delay: 0.1 }, // Delays after content fades in
   },
 };
 
 const ContentSection = () => {
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 }); // triggerOnce set to false
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 }); // triggerOnce set to false
 
   return (
     <motion.section

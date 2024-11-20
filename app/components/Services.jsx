@@ -78,7 +78,7 @@ const Features = () => {
               className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight uppercase"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }} // Add a delay for sequential fade-in
+              transition={{ duration: 1}} // Add a delay for sequential fade-in
             >
               Helping You Achieve Your Immigration Dreams
             </motion.h1>
@@ -88,7 +88,7 @@ const Features = () => {
             className="text-gray-700 dark:text-gray-300"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }} // Add a slight delay for sequential fade-in
+            transition={{ duration: 1 }} // Add a slight delay for sequential fade-in
           >
             We offer expert services to guide you through every step of your visa and immigration journey, ensuring you receive the best possible assistance and advice.
           </motion.p>
@@ -103,7 +103,7 @@ const Features = () => {
             hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              transition: { staggerChildren: 0.3 } // Stagger the fade-in of service cards
+              transition: { staggerChildren: 0.1 } // Stagger the fade-in of service cards
             }
           }}
         >

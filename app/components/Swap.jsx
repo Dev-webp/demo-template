@@ -16,7 +16,7 @@ const ContentSection = () => {
       y: 0,
       transition: {
         duration: 1,
-        staggerChildren: 0.5, // Delays each child animation
+        staggerChildren: 0.1, // Delays each child animation
       },
     },
   };
@@ -27,7 +27,7 @@ const ContentSection = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8 },
+      transition: { duration: 0.2 },
     },
   };
 
@@ -37,7 +37,7 @@ const ContentSection = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.8, delay: 1.3 }, // Delayed start
+      transition: { duration: 0.2, delay: 0.2 }, // Delayed start
     },
   };
 
@@ -46,9 +46,9 @@ const ContentSection = () => {
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="py-10"
+      className="py-0"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row-reverse gap-16 py-10 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row-reverse gap-16 py-14 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50">
         {/* Image Section */}
         <motion.div
           variants={imageVariants} // Use the image-specific variants

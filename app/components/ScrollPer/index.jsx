@@ -50,11 +50,10 @@ const Section1 = ({ scrollYProgress }) => {
 }
 
 const Section2 = ({ scrollYProgress }) => {
-  // Adding a skew effect, translate, and opacity for a more dynamic animation
-  const scale = useTransform(scrollYProgress, [0.5, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0.5, 1], [0, 0]); // Skew-like rotation
-  const opacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
-  const translateY = useTransform(scrollYProgress, [0.5, 1], [0, 0]);
+  const scale = useTransform(scrollYProgress, [0.4, 0.7], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0.4, 0.7], [0, 0]); // Skew-like rotation
+  const opacity = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]); // Opacity becomes visible earlier
+  const translateY = useTransform(scrollYProgress, [0.4, 0.7], [50, 0]); // Added translate effect for smoother entry
 
   return (
     <motion.div
