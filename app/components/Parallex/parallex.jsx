@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { useTransform, useScroll, motion } from 'framer-motion';
+import { FaA } from 'react-icons/fa6';
 
 export default function Parallex() {
   
@@ -49,16 +50,36 @@ export default function Parallex() {
 const Column = ({ y }) => {
   return (
     <motion.div className={styles.column} style={{ y }}>
-      <div className={styles.gridItem}>
-        {/* <p className={styles.text}>Text 1</p> */}
-      </div>
-      <div className={styles.gridItem}>
-        {/* <p className={styles.text}>Text 2</p> */}
-      </div>
-      <div className={styles.gridItem}>
-        {/* <p className={styles.text}>Text 3</p> */}
-      </div>
-    </motion.div>
+      
+  <div className={styles.gridItem}>
+    <p className={styles.text}>
+      "With our assistance, over 5,000 clients have successfully achieved their dream of studying or working abroad."
+    </p>
+    <p className={styles.name}>- John Doe</p> {/* Name below the testimonial */}
+  </div>
+  
+  <div className={styles.gridItem}>
+    <p className={styles.text}>
+      "Thanks to VJC Overseas, I secured my student visa within weeks. The process was seamless, and their guidance was invaluable!"
+    </p>
+    <p className={styles.name}>- Sarah Lee</p> {/* Name below the testimonial */}
+  </div>
+  
+  <div className={styles.gridItem}>
+    <p className={styles.text}>
+      "From consultation to visa approval, VJC Overseas made my family's immigration journey stress-free. Highly recommended!"
+    </p>
+    <p className={styles.name}>- Michael Green</p> {/* Name below the testimonial */}
+  </div>
+  
+  <div className={styles.gridItem}>
+    <p className={styles.text}>
+      "Our team has helped over 3,000 professionals relocate globally with the right work permits and immigration support."
+    </p>
+    <p className={styles.name}>- Emily Roberts</p> {/* Name below the testimonial */}
+  </div>
+</motion.div>
+
   );
 };
 

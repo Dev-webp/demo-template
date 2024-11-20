@@ -3,15 +3,17 @@ import Link from "next/link"
 const FooterItem = ({ text, link }) => {
 return (
     <li>
-        <Link href={link} className="duration-200 hover:text-orange-500 dark:hover:text-blue-500">{text}</Link>
+        <Link href={link} className="duration-200 hover:text-orange-500 dark:hover:text-blue-500">
+            {text}
+        </Link>
     </li>
 )
 }
  
 const FooterBlockItem = ({ title, items }) => {
 return (
-    <div className="space-y-6">
-        <h1 className="text-lg font-semibold text-gray-100 dark:text-gray-100">
+    <div className="space-y-5">
+        <h1 className="text-lg font-semibold text-gray-200 dark:text-gray-100 uppercase">
             {title}
         </h1>
         <ul className="space-y-3">
@@ -26,49 +28,18 @@ return (
 }
  
 const footerBlocks = [
-    {
-        "id": 1,
-        "title": "Visa Services",
-        "items": [
-          {
-            "id": 1,
-            "text": "Student Visa",
-            "link": "#"
-          },
-          {
-            "id": 2,
-            "text": "Work Visa",
-            "link": "#"
-          },
-          {
-            "id": 3,
-            "text": "Tourist Visa",
-            "link": "#"
-          },
-          {
-            "id": 4,
-            "text": "Family Visa",
-            "link": "#"
-          },
-          {
-            "id": 5,
-            "text": "PR Visa",
-            "link": "#"
-          }
-        ]
-      },
 {
-    id: 2,
-    title: "Company",
+    id: 1,
+    title: "Navigation",
     items: [
         {
             id: 1,
-            text: "About",
+            text: "Home",
             link: "#"
         },
         {
             id: 2,
-            text: "Career",
+            text: "About",
             link: "#"
         },
         {
@@ -76,94 +47,116 @@ const footerBlocks = [
             text: "Contact",
             link: "#"
         },
+    ]
+},
+{
+    id: 2,
+    title: "Services",
+    items: [
         {
-            id: 4,
-            text: "Consult",
+            id: 1,
+            text: "Student Visa Assistance",
             link: "#"
         },
         {
-            id: 5,
-            text: "Services",
+            id: 2,
+            text: "Permanent Residency Consultation",
+            link: "#"
+        },
+        {
+            id: 3,
+            text: "Work Visa Processing",
             link: "#"
         },
     ]
 },
 {
     id: 3,
-    title: "Social",
-    items: [
-        {
-            id: 1,
-            text: "Twitter X",
-            link: "#"
-        },
-        {
-            id: 2,
-            text: "Instagram",
-            link: "#"
-        },
-        {
-            id: 3,
-            text: "Threds",
-            link: "#"
-        },
-        {
-            id: 4,
-            text: "Facebook",
-            link: "#"
-        },
-        {
-            id: 5,
-            text: "Linkedin",
-            link: "#"
-        },
-    ]
-},
-{
-    id: 4,
     title: "Resources",
     items: [
         {
             id: 1,
-            text: "Blog",
+            text: "Immigration Guides",
             link: "#"
         },
         {
             id: 2,
-            text: "Privacy",
+            text: "Visa Application Tips",
             link: "#"
         },
         {
             id: 3,
-            text: "Terms",
-            link: "#"
-        },
-        {
-            id: 4,
-            text: "FAQ",
+            text: "Country-Specific Requirements",
             link: "#"
         },
     ]
 },
+
 ]
  
  
 const FooterBlock = () => {
 return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-gray-300 dark:text-gray-300"   >
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5  py-20 flex flex-col lg:flex-row gap-14">
-            <div className="space-y-3 lg:w-96">
-            <Link href="#">
-  <div className="flex items-center gap-2">
-    <img src="/favicon.png" alt="Logo" className="w-8 h-8" /> {/* Replace with your image path */}
-    <span className="text-gray-100 font-bold text-2xl">VJC OVERSEAS</span>
-  </div>
-</Link>
-
-                <p className="max-w-lg">
-                    Crafting Solutions with Precision and Expertise
-                </p>
-                <div className="flex w-full gap-5">
+    <footer className="pt-16 md:pt-20 bg-gray-900 dark:bg-gray-900 bg-cover bg-left-top"
+    //  style={{
+    //     backgroundImage: 'url(/foot-2.png)',
+    //   }}
+      >
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
+            <div className="w-full text-gray-300 dark:text-gray-300 grid grid-cols-2 lg:grid-cols-4 gap-8 pb-4 border-b border-b-gray-200 dark:border-b-gray-800">
+                <div className="flex">
+                    {/* <Link href="#">
+                    <div className="flex items-center gap-2">
+                    <img src="/favicon.png" alt="Logo" className="w-8 h-8" /> 
+                        <span className="text-transparent tracking-tighter bg-clip-text bg-gradient-to-tr from-orange-800 to-orange-400 font-bold text-2xl">VJC OVERSEAS</span></div>
+                    </Link> */}
+                </div>
+                {/* <div className="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    <span>Bangalore</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                    </svg>
+                    <span>+243 ......</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
+                    </svg>
+                    <span>info@dcssarl</span>
+                </div> */}
+            </div>
+            <nav className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-8 py-10 text-gray-300 dark:text-gray-300">
+                {
+                    footerBlocks.map(footerBlock=>(
+                        <FooterBlockItem key={footerBlock.id} {...footerBlock}/>
+                    ))
+                }
+                <div className="space-y-5 col-span-2 md:col-span-3 lg:col-span-1">
+                    <h1 className="text-lg font-semibold text-gray-100 dark:text-gray-100">
+                        Subscribe for more!
+                    </h1>
+                    <p className="max-w-xl">
+                    Empowering your journey with expert guidance and tailored solutions.
+                    </p>
+                    <form className="grid w-full relative max-w-xl">
+                        <div className="flex flex-col gap-3 w-full relative">
+                            <input type="email" className="w-full outline-none px-3 py-3 rounded-md bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700" placeholder="johndoe@gmail.com" />
+                            <button className="w-full py-3 sm:py-0 sm:w-max sm:absolute sm:right-1 sm:inset-y-1 px-4 text-sm flex sm:items-center justify-center outline-none bg-orange-500 text-white rounded-md">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <div className="w-full flex flex-col md:flex-row gap-4 items-center sm:justify-between py-3 border-t border-gray-200 dark:border-t-gray-800 text-gray-700 dark:text-gray-300">
+                <div className="flex text-center sm:text-left sm:min-w-max">
+                    <p> © 2024. All right reserved </p>
+                </div>
+                <div className="flex justify-center sm:justify-end w-full gap-6 mr-1 text-gray-200">
                     <a href="#" aria-label="social link" rel="noreferer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 16">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -186,36 +179,6 @@ return (
                     </a>
                 </div>
             </div>
-            <nav className="lg:flex-1 grid grid-cols-2 md:grid-cols-4 gap-10">
-                {
-                    footerBlocks.map(footerBlock => (
-                        <FooterBlockItem key={footerBlock.id} {...footerBlock} />
-                    ))
-                }
-            </nav>
-        </div>
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-5 bg-black">
-            <div className="py-3 border-t border-t-gray-500 dark:border-t-gray-900 flex flex-col md:flex-row md:justify-between gap-6 md:items-center">
-                <div className="max-w-md text-gray-300 dark:text-gray-300 space-y-3">
-                    <h2 className="text-lg font-semibold text-gray-100 dark:text-gray-100">
-                        Join our news-letter
-                    </h2>
-                    <p>
-                    Empowering Your Business with Tailored Innovation.
-                    </p>
-                </div>
-                <div className="flex-1 max-w-md">
-                    <form action="#" className="w-full flex flex-col sm:flex-row gap-3">
-                        <input type="email" placeholder="johndoe@gmail.com" className="px-5 py-2.5 rounded-md outline-none flex-1 bg-gray-200 dark:bg-gray-800" />
-                        <button className="outline-none w-full py-2.5 px-5 sm:w-max bg-orange-500 text-white rounded-md flex items-center justify-center">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-            </div>
-            {/* <div className="px-5 sm:px-10 md:px-12 lg:px-5 flex justify-center text-center py-3 bg-gray-100 dark:bg-gray-900 rounded-md">
-                <p> © 2024. All right reserved </p>
-            </div> */}
         </div>
     </footer>
 )

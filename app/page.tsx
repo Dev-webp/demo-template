@@ -31,13 +31,15 @@ export default function Home() {
       {/* Non-Critical Content Loaded Lazily */}
       <Suspense fallback={<div>Loading...</div>}>
         <ScrollPer />
-        <div className="h-[91rem] md:h-60 lg:h-60"></div>
+        <div className="h-[91rem] md:h-60 lg:h-72"></div>
         <Scroll />
         <Two />
-        <div className="h-[80rem] md:h-0 lg:h-0"></div>
+        <div className="h-[80rem] md:h-0 lg:h-10"></div>
         <CTA />
         <Price />
-        <Parallex />
+        <div>
+          <h1 className="text-[2.75rem] font-semibold uppercase text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight text-center mt-10">What Our <br/> Customers Say</h1>
+        <Parallex /> </div>
         <Blog />
         <FAQ />
       </Suspense>

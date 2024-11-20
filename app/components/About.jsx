@@ -41,10 +41,14 @@ const ContentSection = () => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       className="py-10"
+      
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row gap-16 py-10 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row gap-16 py-10 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50" 
+      style={{
+        backgroundImage: 'url(/liquid-cheese-2.png)',  // Replace with your background image
+      }}>
         {/* Image Section */}
-        <motion.div variants={imageVariants} className="flex md:flex-1">
+        <motion.div variants={imageVariants} className="flex md:flex-1" >
           <Image
             src="/b3.webp"
             alt="Visa consultation services"

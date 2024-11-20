@@ -39,7 +39,7 @@ export const titleVariants = {
         y: 0,
         transition: {
             type: "spring",
-            duration: 2.2,
+            duration: 1.2,
         }
     }
 }
