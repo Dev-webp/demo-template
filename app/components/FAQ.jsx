@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+// import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const FAQComponent = () => {
   const [searchQuery ] = useState("");
@@ -33,14 +33,14 @@ const FAQComponent = () => {
     }
   ];
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+  // const toggleAccordion = (index) => {
+  //   setActiveIndex(activeIndex === index ? null : index);
+  // };
 
-  const filteredFAQs = faqData.filter((faq) =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // const filteredFAQs = faqData.filter((faq) =>
+  //   faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //   faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
 
   return (
     <div className="py-10 mt-10 mb-10 bg-cover bg-center h-screen" style={{ backgroundImage: "url('/dot.png')" }}>
