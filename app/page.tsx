@@ -34,7 +34,7 @@ export default function Home() {
         <div className="h-[91rem] md:h-60 lg:h-72"></div>
         <Scroll />
         <Two />
-        <div className="h-[80rem] md:h-0 lg:h-10"></div>
+        <div className="h-[90rem] md:h-0 lg:h-32"></div>
         <CTA />
         <Price />
         <div>

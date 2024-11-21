@@ -2,6 +2,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { FaTag } from 'react-icons/fa';
+
+
 
  
 const Navbar = () => {
@@ -63,7 +66,6 @@ return (
     </div>
   </div> */}
   <header className="sticky left-0 top-0 w-full flex items-center h-16 border-b border-b-gray-100 dark:border-b-gray-900 z-40 bg-gray-50 dark:bg-gray-950 bg-opacity-80 backdrop-filter backdrop-blur-xl ">
-    {/* style={{ backgroundImage: 'url(/liquid-cheese-2.png)' }} */}
     <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
       <div className="flex items-center min-w-max">
         <Link href="#" className="text-xl font-semibold flex items-center gap-x-2">
@@ -107,6 +109,15 @@ return (
             <Link href="#" className="relative py-2 duration-300 ease-linear hover:text-orange-500 after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-orange-500">Clients</Link>
           </li>
         </ul>
+        <div className="flex sm:items-center lg:min-w-max mt-10 lg:mt-0">
+  <Link
+    href="#"
+    className="px-6 items-center h-10 rounded-3xl text-orange-500 border border-gray-100 dark:border-gray-800 dark:text-white bg-gray-100 dark:bg-gray-900 duration-300 ease-linear flex justify-center w-full sm:w-auto mr-1 "
+  >
+    {/* Discount icon */}
+    <FaTag className="text-xl" />
+  </Link>
+</div>
         <div className="flex sm:items-center lg:min-w-max mt-10 lg:mt-0">
           <Link href="#" className="px-6 items-center h-10 rounded-3xl text-orange-500 border border-gray-100 dark:border-gray-800 dark:text-white bg-gray-100 dark:bg-gray-900 duration-300 ease-linear flex justify-center w-full sm:w-auto">
             Book a call
@@ -168,7 +179,7 @@ export default function HeroSection() {
       variants={containerVariants(0.4)}
     >
       {/* Overlay Effect */}
-      <div className="absolute top-0 left-0 w-full h-full bg-white opacity-30"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70"></div>
     </motion.div>
 
     {/* Left Section (Text) */}

@@ -58,7 +58,7 @@ export default function Description() {
         </div>
 
         {/* Bottom Line on Hover */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-all"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
     </div>
 
     {/* Box 2 */}
@@ -75,7 +75,7 @@ export default function Description() {
         </div>
 
         {/* Bottom Line on Hover */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-all"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
     </div>
 
     {/* Box 3 */}
@@ -92,7 +92,7 @@ export default function Description() {
         </div>
 
         {/* Bottom Line on Hover */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-all"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-all"></div>
     </div>
 </div>
 

@@ -34,26 +34,26 @@ const ServiceCard = ({ title, description, icon }) => {
 const services = [
   {
     id: 1,
-    title: "Visa Consultation",
-    description: "Get expert guidance on visa application procedures and requirements tailored to your specific needs.",
+    title: "Continuous Improvement",
+    description: "We believe in the power of learning and evolving. Our team is committed to staying updated with the latest trends, policies, and opportunities in the field of international education and immigration.",
     icon: <FaRegAddressCard />
   },
   {
     id: 2,
-    title: "Immigration Services",
-    description: "Comprehensive support for all your immigration-related matters, ensuring a smooth transition to your desired country.",
+    title: "Client Satisfaction",
+    description: "Over the years, we have built a reputation for delivering exceptional service, and we are proud of the positive feedback we receive from our clients.",
     icon: <FaHandshake />
   },
   {
     id: 3,
-    title: "Global Opportunities",
-    description: "Explore various immigration and visa opportunities across the globe, from work visas to study programs.",
+    title: "Recognised Excellence",
+    description: "Our commitment to excellence has been recognised through numerous awards. In 2022, 2023, and 2024, we were honoured with the title of India’s Most Trusted Brand of the Year.",
     icon: <FaGlobeAmericas />
   },
   {
     id: 4,
-    title: "Family & Dependent Visas",
-    description: "We help you reunite with your loved ones through family and dependent visa programs for various countries.",
+    title: "A Legacy of Excellence and Trust",
+    description: "For three consecutive years, we have worked tirelessly to maintain the highest standards and improve our services. This recognition is a reflection of the trust our clients place in us and the successful outcomes we have helped them achieve.",
     icon: <FaUsers />
   },
 ];
@@ -71,7 +71,7 @@ const Features = () => {
               whileInView={{ opacity: 1 }} // Fade in to full opacity when in view
               transition={{ duration: 1 }} // Duration of the fade-in
             >
-              Our Services
+              Why Choose VJC Overseas?
             </motion.span>
             {/* Fade-in for h1 */}
             <motion.h1
@@ -80,7 +80,7 @@ const Features = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1}} // Add a delay for sequential fade-in
             >
-              Helping You Achieve Your Immigration Dreams
+              At VJC Overseas, we are not just another service provider.
             </motion.h1>
           </div>
           {/* Fade-in for paragraph */}
@@ -90,7 +90,8 @@ const Features = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }} // Add a slight delay for sequential fade-in
           >
-            We offer expert services to guide you through every step of your visa and immigration journey, ensuring you receive the best possible assistance and advice.
+            We are a dedicated partner in your journey towards success abroad. Our team is passionate about ensuring that each client receives the support they need to make their dreams a reality.
+            We take great pride in the satisfaction of every student and professional we serve, and we are committed to putting in 100% effort to help you succeed.
           </motion.p>
         </div>
 

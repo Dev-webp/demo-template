@@ -43,8 +43,8 @@ const FAQComponent = () => {
   );
 
   return (
-    <div className="py-10 mt-10 mb-10 bg-cover bg-center" style={{ backgroundImage: "url('/dot.png')" }}>
-      <div className="max-w-3xl mx-auto mb-10 bg-opacity-80 bg-white p-6 rounded-lg shadow-xl">
+    <div className="py-10 mt-10 mb-10 bg-cover bg-center h-screen" style={{ backgroundImage: "url('/dot.png')" }}>
+      {/* <div className="max-w-3xl mx-auto mb-10 bg-opacity-80 bg-white p-6 rounded-lg shadow-xl">
         <h2 className="text-[2.50rem] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 mb-8 text-center uppercase">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {filteredFAQs.map((faq, index) => (
@@ -80,7 +80,7 @@ const FAQComponent = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

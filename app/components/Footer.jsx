@@ -1,188 +1,200 @@
-import Link from "next/link"
- 
-const FooterItem = ({ text, link }) => {
-return (
-    <li>
-        <Link href={link} className="duration-200 hover:text-orange-500 dark:hover:text-blue-500">
-            {text}
-        </Link>
-    </li>
-)
-}
- 
-const FooterBlockItem = ({ title, items }) => {
-return (
-    <div className="space-y-5">
-        <h1 className="text-lg font-semibold text-gray-200 dark:text-gray-100 uppercase">
-            {title}
-        </h1>
-        <ul className="space-y-3">
-            {
-                items.map(item=>(
-                    <FooterItem key={item.id} {...item}/>
-                ))
-            }
-        </ul>
-    </div>
-)
-}
- 
-const footerBlocks = [
-{
-    id: 1,
-    title: "Navigation",
-    items: [
-        {
-            id: 1,
-            text: "Home",
-            link: "#"
-        },
-        {
-            id: 2,
-            text: "About",
-            link: "#"
-        },
-        {
-            id: 3,
-            text: "Contact",
-            link: "#"
-        },
-    ]
-},
-{
-    id: 2,
-    title: "Services",
-    items: [
-        {
-            id: 1,
-            text: "Student Visa Assistance",
-            link: "#"
-        },
-        {
-            id: 2,
-            text: "Permanent Residency Consultation",
-            link: "#"
-        },
-        {
-            id: 3,
-            text: "Work Visa Processing",
-            link: "#"
-        },
-    ]
-},
-{
-    id: 3,
-    title: "Resources",
-    items: [
-        {
-            id: 1,
-            text: "Immigration Guides",
-            link: "#"
-        },
-        {
-            id: 2,
-            text: "Visa Application Tips",
-            link: "#"
-        },
-        {
-            id: 3,
-            text: "Country-Specific Requirements",
-            link: "#"
-        },
-    ]
-},
+import React from 'react';
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaTwitter } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaWhatsapp } from 'react-icons/fa';
 
-]
- 
- 
-const FooterBlock = () => {
-return (
-    <footer className="pt-16 md:pt-20 bg-gray-900 dark:bg-gray-900 bg-cover bg-left-top"
-    //  style={{
-    //     backgroundImage: 'url(/foot-2.png)',
-    //   }}
-      >
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
-            <div className="w-full text-gray-300 dark:text-gray-300 grid grid-cols-2 lg:grid-cols-4 gap-8 pb-4 border-b border-b-gray-200 dark:border-b-gray-800">
-                <div className="flex">
-                    <Link href="#">
-                    <div className="flex items-center gap-2">
-                    <img src="/favicon.png" alt="Logo" className="w-8 h-8" /> 
-                        <span className="text-transparent tracking-tighter bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 font-bold text-2xl">VJC OVERSEAS</span></div>
-                    </Link>
-                </div>
-                
-                <div className="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
-                    </svg>
-                    <span>+91 9160449000</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
-                    </svg>
-                    <span> info@vjcoverseas.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                    <span>Bangalore /Hyderabad /USA</span>
-                </div>
+const Footer = () => {
+  return (
+    <>
+    <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-12">
+    <div className="max-w-6xl mx-auto px-5 text-center md:text-left border-b border-gray-700 mb-10">
+        {/* Grid for Content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            {/* Navigation */}
+            <div>
+                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-4 text-center lg:text-left uppercase">Navigation</h3>
+                <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
+                    <li><a href="#" className="hover-underline">Home</a></li>
+                    <li><a href="#" className="hover-underline">About Us</a></li>
+                    <li><a href="#" className="hover-underline">Our Services</a></li>
+                    <li><a href="#" className="hover-underline">Contact</a></li>
+                </ul>
             </div>
-            <nav className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-8 py-10 text-gray-300 dark:text-gray-300">
-                {
-                    footerBlocks.map(footerBlock=>(
-                        <FooterBlockItem key={footerBlock.id} {...footerBlock}/>
-                    ))
-                }
-                <div className="space-y-5 col-span-2 md:col-span-3 lg:col-span-1">
-                    <h1 className="text-lg font-semibold text-gray-100 dark:text-gray-100">
-                        Subscribe for more!
-                    </h1>
-                    <p className="max-w-xl">
-                    Empowering your journey with expert guidance and tailored solutions.
-                    </p>
-                    <form className="grid w-full relative max-w-xl">
-                        <div className="flex flex-col gap-3 w-full relative">
-                            <input type="email" className="w-full outline-none px-3 py-3 rounded-md bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700" placeholder="johndoe@gmail.com" />
-                            <button className="w-full py-3 sm:py-0 sm:w-max sm:absolute sm:right-1 sm:inset-y-1 px-4 text-sm flex sm:items-center justify-center outline-none bg-orange-500 text-white rounded-md">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </nav>
-            <div className="w-full flex flex-col md:flex-row gap-4 items-center sm:justify-between py-3 border-t border-gray-200 dark:border-t-gray-800 text-gray-700 dark:text-gray-300">
-                <div className="flex text-center sm:text-left sm:min-w-max">
-                    <p> © 2024. All right reserved </p>
-                </div>
-                <div className="flex justify-center sm:justify-end w-full gap-6 mr-1 text-gray-200">
-                    <a href="#" aria-label="social link" rel="noreferer">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 16">
-                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                        </svg>
+            {/* Services */}
+            <div>
+                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-4 text-center lg:text-left uppercase">Services</h3>
+                <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
+                    <li><a href="#" className="hover-underline">Study Visa Consultation</a></li>
+                    <li><a href="#" className="hover-underline">Visa Application Assistance</a></li>
+                    <li><a href="#" className="hover-underline">Immigration Advice</a></li>
+                    <li><a href="#" className="hover-underline">Resume Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+    <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-4 text-center lg:text-left uppercase">Our Expertise</h3>
+    <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
+        <li><a href="#" className="hover-underline">Immigration Support</a></li>
+        <li><a href="#" className="hover-underline">Career Counseling for Students</a></li>
+        <li><a href="#" className="hover-underline">Work Permit Guidance</a></li>
+        <li><a href="#" className="hover-underline">Skill Assessment Assistance</a></li>
+    </ul>
+</div>
+
+                
+            {/* Social Media */}
+            <div>
+                <h3 className="text-lg font-bold text-orange-500 mb-4 uppercase">Follow Us</h3>
+                <div className="flex space-x-4 ml-36 md:ml-0 lg:ml-0">
+                    <a href="#" className="group">
+                        <FaFacebook className="text-white group-hover:text-orange-500" />
                     </a>
-                    <a href="#" aria-label="social link" rel="noreferer">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                        </svg>
+                    <a href="#" className="group">
+                        <FaTwitter className="text-white group-hover:text-orange-500" />
                     </a>
-                    <a href="#" aria-label="social link" rel="noreferer">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 16">
-                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                        </svg>
+                    <a href="#" className="group">
+                        <FaInstagram className="text-white group-hover:text-orange-500" />
                     </a>
-                    <a href="#" aria-label="social link" rel="noreferer">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                        </svg>
+                    <a href="#" className="group">
+                        <FaLinkedin className="text-white group-hover:text-orange-500" />
+                    </a>
+                    <a href="#" className="group">
+                        <FaYoutube className="text-white group-hover:text-orange-500" />
                     </a>
                 </div>
+                <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 mt-10 w-full md:w-auto">
+            <p className="text-gray-300 font-semibold">Email: <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
+            <p className="mt-2 font-semibold text-gray-300">CONTACT: <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
+          </div>
             </div>
         </div>
-    </footer>
-)
-}
- 
-export default FooterBlock
+
+       
+    </div>
+
+    <div className="container mx-auto px-6 md:px-12 ">
+        {/* Address and Contact Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-8 md:space-y-0 md:space-x-8">
+             {/* Hyderabad Address */}
+        <div className="mb-8 md:mb-0 text-center md:w-1/3">
+            <h3 className="text-lg font-bold uppercase mb-2 text-orange-500">VJC Overseas (Hyderabad)</h3>
+            <p>62/A, Ground Floor,</p>
+            <p>Sundari Reddy Bhavan, Fresh Mart,</p>
+            <p>Vengalrao Nagar, Sanjeeva Reddy Nagar,</p>
+            <p>Hyderabad, Telangana, 500038</p>
+            {/* Google Map */}
+            <div className="mt-4">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7547877659777!2d78.44687711507425!3d17.438545988039776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91e9d0c75cd3%3A0x77c7f23e8a49a2d6!2sSanjeeva%20Reddy%20Nagar%2C%20Hyderabad%2C%20Telangana%20500038!5e0!3m2!1sen!2sin!4v1609591824253!5m2!1sen!2sin"
+                    width="100%"
+                    height="200"
+                    frameBorder="0"
+                    allowFullScreen=""
+                    aria-hidden="false"
+                    tabIndex="0"
+                    className="rounded-lg border"
+                ></iframe>
+            </div>
+        </div>
+
+           {/* USA Address */}
+        <div className="flex flex-col items-center md:w-1/3">
+            <h3 className="text-lg font-bold uppercase mb-2 text-orange-500">VJC Overseas (USA)</h3>
+            <p>7200 Preston Rd, Plano,</p>
+            <p>TX 75024, USA</p>
+            <p className="mt-2 font-semibold">
+                <a href="tel:+13322012159" className="flex items-center space-x-2 hover:text-saffron">
+                    <FaWhatsapp size={25} /> 
+                    <span>: +1 3322012159</span>
+                </a>
+            </p>
+            {/* Google Map */}
+            <div className="mt-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.4415885439596!2d-96.80493858487804!3d33.06426432985971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c195e7a517c81%3A0x76e1da09818e11a7!2s7200%20Preston%20Rd%2C%20Plano%2C%20TX%2075024%2C%20USA!5e0!3m2!1sen!2sin!4v1609591907834!5m2!1sen!2sin"
+                    width="100%"
+                    height="200"
+                    frameBorder="0"
+                    allowFullScreen=""
+                    aria-hidden="false"
+                    tabIndex="0"
+                    className="rounded-lg border"
+                ></iframe>
+            </div>
+        </div>
+
+        {/* Bangalore Address */}
+        <div className="mb-8 md:mb-0 text-center md:w-1/3">
+            <h3 className="text-lg font-bold uppercase mb-2 text-orange-500">VJC Overseas (Bangalore)</h3>
+            <p>16 & 17, Ground Floor,</p>
+            <p>Raheja Arcade,</p>
+            <p>5th Block, Koramangala,</p>
+            <p>Bangalore, India, 560095</p>
+            {/* Google Map */}
+            <div className="mt-4">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.695142720451!2d77.6166214150411!3d12.935175190879746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c3ad0cc183%3A0x65c2d7b95c7a8e13!2sRaheja%20Arcade%2C%20Koramangala%205th%20Block%2C%20Bengaluru%2C%20Karnataka%20560095!5e0!3m2!1sen!2sin!4v1609591965873!5m2!1sen!2sin"
+                    width="100%"
+                    height="200"
+                    frameBorder="0"
+                    allowFullScreen=""
+                    aria-hidden="false"
+                    tabIndex="0"
+                    className="rounded-lg border"
+                ></iframe>
+            </div>
+        </div>
+        </div>
+
+         {/* Copyright Section */}
+         <div className="border-t border-gray-700 pt-6 flex flex-col items-center space-y-4 mt-4">
+            <p>&copy; 2024 VJC Overseas. All Rights Reserved.</p>
+            {/* <button
+                className="bg-orange-500 text-black px-4 py-2 rounded-md hover:bg-orange-600"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+                Book Free Consultation
+            </button> */}
+        </div>
+
+        {/* Call to Action & Email Section */}
+        {/* <div className="flex flex-col md:flex-row justify-between mt-8 space-x-6 items-center md:items-start ml-0 lg:ml-10">
+          
+          <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 w-full md:w-auto">
+            <p className="text-gray-300">Email: <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
+            <p className="mt-2 font-semibold text-gray-300">CONTACT: <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
+          </div>
+
+          
+          <Link href="#form" passHref>
+            <button className="bg-saffron text-black font-semibold py-2 px-6 mr-4 lg:mr-0 ml-0 lg:ml-0 rounded-lg hover:bg-black hover:text-white transition uppercase mb-6 md:mb-0">
+              Book Free Consultation
+            </button>
+          </Link>
+
+          
+          <div className="flex space-x-6 justify-center md:justify-start w-full md:w-auto">
+            <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-saffron">
+              <FaFacebook size={24} />
+            </a>
+            <a href="https://twitter.com/vjcoverseas" target="_blank" rel="noopener noreferrer" className="text-white hover:text-saffron">
+              <FaTwitter size={24} />
+            </a>
+            <a href="https://www.instagram.com/vjc_overseas_bangalore/?utm_source=qr&igsh=MXZzNXY3dGV1YXg1bw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-white hover:text-saffron">
+              <FaInstagram size={24} />
+            </a>
+            <a href="https://www.linkedin.com/company/vjc-overseas/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-saffron">
+              <FaLinkedin size={24} />
+            </a>
+            <a href="https://www.youtube.com/@vjcoverseas9434" target="_blank" rel="noopener noreferrer" className="text-white hover:text-saffron">
+              <FaYoutube size={24} />
+            </a>
+          </div>
+        </div> */}
+        </div>
+</footer>
+
+    </>
+  );
+};
+
+export default Footer;

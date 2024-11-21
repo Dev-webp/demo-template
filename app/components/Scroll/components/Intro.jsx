@@ -22,22 +22,30 @@ export default function Hero() {
 
             {/* Hero Content */}
             <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
-                <motion.h1
-                    className="text-[4vw] md:text-[4vw] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
+            <motion.h1
+                    className="text-[6vw] md:text-[4vw] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                    Your Gateway to Global Opportunities
+                    About Us – VJC Overseas
+                </motion.h1>
+                <motion.h1
+                    className="text-[3vw] md:text-[2vw] max-w-5xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3, duration: 0.8 }}
+                >
+                    Welcome to VJC Overseas, a trusted name in the field of overseas education and immigration services
                 </motion.h1>
 
                 <motion.p
-                    className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl"
+                    className="mt-4 text-base md:text-xl text-gray-300 max-w-2xl"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                    Expert guidance for hassle-free immigration, study abroad assistance, and visa solutions tailored to your goals.  
+                    Founded in 2009, we began as a local firm with a simple yet powerful goal to provide the highest quality services to students aspiring to study abroad and professionals seeking to build their careers overseas. Our commitment to excellence has transformed us into a leading name in the industry.  
                 </motion.p>
 
                 <motion.div
