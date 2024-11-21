@@ -106,7 +106,7 @@ const Features = () => {
 
             {/* Heading (h1) Animation */}
             <motion.h1
-              className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-4xl xl:text-[2.75rem] leading-tight uppercase"
+              className="text-3xl font-semibold text-orange-500 dark:text-gray-200 md:text-4xl xl:text-[2.75rem] leading-tight uppercase"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{

@@ -14,7 +14,7 @@ const ServiceSection = () => {
         >
           <div className="flex gap-10 flex-col items-center">
             <div className="text-center max-w-2xl">
-              <h2 className="text-[2.75rem] font-semibold uppercase text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight">
+              <h2 className="text-[2.75rem] font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight">
                 Our Immigration Services
               </h2>
             </div>

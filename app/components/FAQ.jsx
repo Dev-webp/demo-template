@@ -6,31 +6,31 @@ const FAQComponent = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqData = [
-    // {
-    //   id: 1,
-    //   question: "How do I create an account?",
-    //   answer: "To create an account, click on the 'Sign Up' button in the top right corner. Fill in your details including email, password, and personal information. Once submitted, you'll receive a confirmation email to activate your account."
-    // },
-    // {
-    //   id: 2,
-    //   question: "What payment methods do you accept?",
-    //   answer: "We accept various payment methods including credit/debit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our encrypted payment gateway."
-    // },
-    // {
-    //   id: 3,
-    //   question: "How can I reset my password?",
-    //   answer: "To reset your password, click on the 'Forgot Password' link on the login page. Enter your registered email address, and we'll send you instructions to create a new password. For security reasons, the reset link expires after 24 hours."
-    // },
-    // {
-    //   id: 4,
-    //   question: "What is your refund policy?",
-    //   answer: "Our refund policy allows returns within 30 days of purchase. Items must be unused and in their original packaging. Once we receive and inspect the return, we'll process your refund within 5-7 business days."
-    // },
-    // {
-    //   id: 5,
-    //   question: "How can I contact customer support?",
-    //   answer: "Our customer support team is available 24/7. You can reach us through email at support@example.com, live chat on our website, or call us at 1-800-123-4567. We typically respond to inquiries within 24 hours."
-    // }
+    {
+      id: 1,
+      question: "How do I create an account?",
+      answer: "To create an account, click on the 'Sign Up' button in the top right corner. Fill in your details including email, password, and personal information. Once submitted, you'll receive a confirmation email to activate your account."
+    },
+    {
+      id: 2,
+      question: "What payment methods do you accept?",
+      answer: "We accept various payment methods including credit/debit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our encrypted payment gateway."
+    },
+    {
+      id: 3,
+      question: "How can I reset my password?",
+      answer: "To reset your password, click on the 'Forgot Password' link on the login page. Enter your registered email address, and we'll send you instructions to create a new password. For security reasons, the reset link expires after 24 hours."
+    },
+    {
+      id: 4,
+      question: "What is your refund policy?",
+      answer: "Our refund policy allows returns within 30 days of purchase. Items must be unused and in their original packaging. Once we receive and inspect the return, we'll process your refund within 5-7 business days."
+    },
+    {
+      id: 5,
+      question: "How can I contact customer support?",
+      answer: "Our customer support team is available 24/7. You can reach us through email at support@example.com, live chat on our website, or call us at 1-800-123-4567. We typically respond to inquiries within 24 hours."
+    }
   ];
 
   const toggleAccordion = (index) => {
@@ -43,9 +43,9 @@ const FAQComponent = () => {
   );
 
   return (
-    <div className="py-10 mt-10 mb-10 bg-cover bg-center" style={{ backgroundImage: "url('/.jpg')" }}>
+    <div className="py-10 mt-10 mb-10 bg-cover bg-center" style={{ backgroundImage: "url('/dot.png')" }}>
       <div className="max-w-3xl mx-auto mb-10 bg-opacity-80 bg-white p-6 rounded-lg shadow-xl">
-        <h2 className="text-4xl font-bold text-blue-950 mb-8 text-center uppercase">Frequently Asked Questions</h2>
+        <h2 className="text-[2.50rem] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 mb-8 text-center uppercase">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {filteredFAQs.map((faq, index) => (
             <div

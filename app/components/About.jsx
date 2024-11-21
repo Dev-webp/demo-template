@@ -50,7 +50,7 @@ const ContentSection = () => {
         {/* Image Section */}
         <motion.div variants={imageVariants} className="flex md:flex-1" >
           <Image
-            src="/b3.webp"
+            src="/vjc-1.png"
             alt="Visa consultation services"
             width={1300}
             height={900}
@@ -65,9 +65,9 @@ const ContentSection = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-gray-900 dark:text-white uppercase font-semibold text-2xl sm:text-3xl md:text-[2.50rem]"
+            className="text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 dark:text-white uppercase font-semibold text-2xl sm:text-3xl md:text-[2.50rem]"
           >
-            Empowering Your Immigration Journey<br /> with Expertise
+            Empowering   <br />Your Immigration Journey with Expertise
           </motion.h1>
 
           <motion.p variants={itemVariants}>

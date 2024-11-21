@@ -180,9 +180,9 @@ export default function HeroSection() {
         variants={titleVariants}
         className="font-semibold uppercase leading-tight text-center text-teal-950 dark:text-white text-4xl sm:text-5xl lg:text-6xl"
       >
-        Making Global Dreams a{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-700">
-          Reality!
+        
+        <span className="text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600">
+        Making Global Dreams a Reality!
         </span>
       </motion.h1>
       <motion.p

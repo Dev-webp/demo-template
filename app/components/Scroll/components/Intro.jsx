@@ -23,7 +23,7 @@ export default function Hero() {
             {/* Hero Content */}
             <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
                 <motion.h1
-                    className="text-[4vw] md:text-[4vw] font-bold text-white drop-shadow-lg uppercase"
+                    className="text-[4vw] md:text-[4vw] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}

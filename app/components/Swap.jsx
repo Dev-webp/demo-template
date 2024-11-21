@@ -58,7 +58,7 @@ const ContentSection = () => {
           className="flex md:flex-1"
         >
           <Image
-            src="/b2.webp"
+            src="/vjc-2.png"
             alt="Immigration support services"
             width={1300}
             height={900}
@@ -73,7 +73,7 @@ const ContentSection = () => {
         >
           <motion.h1
             variants={itemVariants} // Fade-in effect for each item
-            className="text-gray-900 dark:text-white uppercase font-semibold text-2xl sm:text-3xl md:text-[2.50rem]"
+            className="text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 dark:text-white uppercase font-semibold text-2xl sm:text-3xl md:text-[2.50rem]"
           >
             Your Trusted Partner in Immigration and Relocation
           </motion.h1>

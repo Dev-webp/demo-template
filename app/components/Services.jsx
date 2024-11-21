@@ -75,7 +75,7 @@ const Features = () => {
             </motion.span>
             {/* Fade-in for h1 */}
             <motion.h1
-              className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight uppercase"
+              className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600  dark:text-orange-500 md:text-4xl xl:text-5xl leading-tight uppercase"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1}} // Add a delay for sequential fade-in

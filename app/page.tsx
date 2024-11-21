@@ -38,7 +38,7 @@ export default function Home() {
         <CTA />
         <Price />
         <div>
-          <h1 className="text-[2.75rem] font-semibold uppercase text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight text-center mt-10">What Our <br/> Customers Say</h1>
+          <h1 className="text-[2.75rem] font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight text-center mt-10">What Our <br/> Customers Say</h1>
         <Parallex /> </div>
         <Blog />
         <FAQ />
