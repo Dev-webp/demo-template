@@ -54,13 +54,13 @@ const FeatureCard = ({ title, description, icon }) => {
         scale: { duration: 0.2 }, // Quick scale effect
       }}
     >
-      <span className="p-2 rounded-md bg-blue-50 text-orange-500 dark:bg-gray-900 dark:text-blue-500 flex w-max">
+      <span className="p-2 rounded-md bg-blue-50 text-orange-500  flex w-max">
         {icon}
       </span>
-      <h2 className="text-gray-800 dark:text-gray-100 text-xl font-semibold uppercase italic">
+      <h2 className="text-gray-800  text-xl font-semibold uppercase italic">
         {title}
       </h2>
-      <p className="text-gray-700 dark:text-gray-300 mx-auto max-w-md">
+      <p className="text-gray-700  mx-auto max-w-md">
         {description}
       </p>
     </motion.div>
@@ -75,85 +75,81 @@ const Features = () => {
 
   return (
     <section className="py-10" style={{ backgroundImage: 'url(/subtle-prism.png)' }}>
-      {/* style={{ backgroundImage: 'url(/subtle-prism.png)' }} */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
-        <div className="flex flex-col space-y-10">
-          {/* Heading section with animations */}
-          <motion.div
-            className="flex flex-col justify-center text-center mx-auto md:max-w-3xl space-y-5"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+    <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
+      <div className="flex flex-col space-y-10">
+        {/* Heading section with animations */}
+        <motion.div
+          className="flex flex-col justify-center text-center mx-auto md:max-w-3xl space-y-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.2,
+            type: 'spring',
+            stiffness: 100,
+            damping: 25
+          }}
+        >
+          {/* Span Animation */}
+          <motion.span
+            className="mx-auto w-max pl-5 uppercase font-semibold relative before:absolute before:w-4 before:h-0.5 before:rounded-md before:left-0 before:top-1/2 before:bg-orange-700 text-orange-600 text-2xl"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.2,
-              // delay: 0.1, 
-              type: 'spring',
-              stiffness: 100,
-              damping: 25
             }}
           >
-            {/* Span Animation */}
-            <motion.span
-              className="mx-auto w-max pl-5 uppercase font-semibold relative before:absolute before:w-4 before:h-0.5 before:rounded-md before:left-0 before:top-1/2 before:bg-orange-700 dark:before:bg-sky-600 text-orange-600 dark:text-blue-500 text-2xl"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.2,
-                // delay: 0.1,
-              }}
-            >
-              Features
-            </motion.span>
-
-            {/* Heading (h1) Animation */}
-            <motion.h1
-              className="text-3xl font-semibold text-orange-500 dark:text-gray-200 md:text-4xl xl:text-[2.75rem] leading-tight uppercase"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.4,
-                // delay: 0.6,
-                type: 'spring',
-                stiffness: 120,
-                damping: 30,
-              }}
-            >
-              Empower Your Business for Global Success
-            </motion.h1>
-
-            {/* Paragraph (p) Animation */}
-            <motion.p
-              className="text-gray-700 dark:text-gray-300 max-w-lg mx-auto"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.4,
-                // delay: 0.2,
-                type: 'spring',
-                stiffness: 120,
-                damping: 30,
-              }}
-            >
-              Unlock new opportunities and expand your reach internationally with our expert visa and immigration services. Our dedicated team is here to guide you through every step of the process, ensuring seamless and successful outcomes for your business ventures abroad.
-            </motion.p>
-          </motion.div>
-
-          {/* Wrapping the entire grid section with motion.div to trigger animations when it's in view */}
-          <motion.div
-            ref={ref}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 sm:gap-y-16 sm:gap-x-12"
-            initial={{ opacity: 0 }}  // Start with the grid section hidden
-            animate={inView ? { opacity: 1 } : { opacity: 0 }}  // Fade in when it's in view
-            transition={{ duration: 0.2, staggerChildren: 0.2 }} // Staggered animation for child elements
+            Features
+          </motion.span>
+  
+          {/* Heading (h1) Animation */}
+          <motion.h1
+            className="text-3xl font-semibold text-orange-500 md:text-4xl xl:text-[2.75rem] leading-tight uppercase"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              type: 'spring',
+              stiffness: 120,
+              damping: 30,
+            }}
           >
-            {features.map((feature, index) => (
-              <motion.div key={feature.id} custom={index}>
-                <FeatureCard {...feature} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+            Empower Your Business for Global Success
+          </motion.h1>
+  
+          {/* Paragraph (p) Animation */}
+          <motion.p
+            className="text-gray-700 max-w-lg mx-auto"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              type: 'spring',
+              stiffness: 120,
+              damping: 30,
+            }}
+          >
+            Unlock new opportunities and expand your reach internationally with our expert visa and immigration services. Our dedicated team is here to guide you through every step of the process, ensuring seamless and successful outcomes for your business ventures abroad.
+          </motion.p>
+        </motion.div>
+  
+        {/* Wrapping the entire grid section with motion.div to trigger animations when it's in view */}
+        <motion.div
+          ref={ref}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 sm:gap-y-16 sm:gap-x-12"
+          initial={{ opacity: 0 }}  // Start with the grid section hidden
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}  // Fade in when it's in view
+          transition={{ duration: 0.2, staggerChildren: 0.2 }} // Staggered animation for child elements
+        >
+          {features.map((feature, index) => (
+            <motion.div key={feature.id} custom={index}>
+              <FeatureCard {...feature} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </section>
+    </div>
+  </section>
+  
   );
 };
 

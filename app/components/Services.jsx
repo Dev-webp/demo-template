@@ -4,30 +4,31 @@ import { motion } from "framer-motion"; // Import motion from framer-motion
 
 const ServiceCard = ({ title, description, icon }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 p-5 xl:p-2 hover:cursor-default rounded-lg bg-gray-100 dark:bg-gray-900 group transition duration-300 z-20 hover:z-30 shadow-md shadow-transparent hover:shadow-gray-100/40 dark:hover:shadow-transparent border border-transparent hover:border-gray-200 dark:hover:border-gray-800 hover:-translate-y-2 overflow-hidden relative">
-      <div className="absolute w-40 h-10 rounded-full border-8 border-sky-600/20 dark:border-sky-500/30 blur-md -z-10 -top-1 right-5 rotate-45" />
-      <div className="flex min-w-max items-start">
-        <div className="p-1.5 rounded-full shadow-sm relative bg-gradient-to-br from-gray-100 to-neutral-300 dark:from-gray-900 dark:to-gray-700">
-          <div className=" bg-gray-100 dark:bg-gray-900 rounded-full p-3 flex">
-            <div className="text-orange-500 text-3xl">{icon}</div>
-          </div>
-        </div>
-      </div>
-      <div className="space-y-5 flex flex-col md:flex-1 relative">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-          {title}
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 text-justify line-clamp-3">
-          {description}
-        </p>
-        <Link href="#" className="text-sky-700 dark:text-sky-400 flex items-center gap-x-3 w-max">
-          Get a free consultation
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-            <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
-          </svg>
-        </Link>
+    <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 p-5 xl:p-2 hover:cursor-default rounded-lg bg-gray-100 group transition duration-300 z-20 hover:z-30 shadow-md shadow-transparent hover:shadow-gray-100/40 border border-transparent hover:border-gray-200 hover:-translate-y-2 overflow-hidden relative">
+  <div className="absolute w-40 h-10 rounded-full border-8 border-sky-600/20 blur-md -z-10 -top-1 right-5 rotate-45" />
+  <div className="flex min-w-max items-start">
+    <div className="p-1.5 rounded-full shadow-sm relative bg-gradient-to-br from-gray-100 to-neutral-300">
+      <div className="bg-gray-100 rounded-full p-3 flex">
+        <div className="text-orange-500 text-3xl">{icon}</div>
       </div>
     </div>
+  </div>
+  <div className="space-y-5 flex flex-col md:flex-1 relative">
+    <h2 className="text-xl font-semibold text-gray-900">
+      {title}
+    </h2>
+    <p className="text-gray-700 text-justify line-clamp-3">
+      {description}
+    </p>
+    <Link href="#" className="text-sky-700 flex items-center gap-x-3 w-max">
+      Get a free consultation
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+        <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
+      </svg>
+    </Link>
+  </div>
+</div>
+
   );
 };
 
@@ -52,8 +53,8 @@ const services = [
   },
   {
     id: 4,
-    title: "A Legacy of Excellence and Trust",
-    description: "For three consecutive years, we have worked tirelessly to maintain the highest standards and improve our services. This recognition is a reflection of the trust our clients place in us and the successful outcomes we have helped them achieve.",
+    title: "Excellence and Trust",
+    description: "For three consecutive years, we have worked tirelessly to maintain the highest standards and improve our services. This recognition is a reflection of the trust our clients place in us.",
     icon: <FaUsers />
   },
 ];
@@ -66,7 +67,7 @@ const Features = () => {
           <div className="space-y-4 max-w-4xl">
             {/* Fade-in for span */}
             <motion.span
-              className="mx-auto w-max pl-5 uppercase font-semibold relative before:absolute before:w-4 before:h-0.5 before:rounded-md before:left-0 before:top-1/2 before:bg-orange-700 dark:before:bg-sky-600 text-orange-600 dark:text-blue-500 text-2xl"
+              className="mx-auto w-max pl-5 uppercase font-semibold relative before:absolute before:w-4 before:h-0.5 before:rounded-md before:left-0 before:top-1/2 before:bg-orange-700  text-orange-600  text-2xl"
               initial={{ opacity: 0 }} // Start with 0 opacity
               whileInView={{ opacity: 1 }} // Fade in to full opacity when in view
               transition={{ duration: 1 }} // Duration of the fade-in
@@ -85,7 +86,7 @@ const Features = () => {
           </div>
           {/* Fade-in for paragraph */}
           <motion.p
-            className="text-gray-700 dark:text-gray-300"
+            className="text-gray-700"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }} // Add a slight delay for sequential fade-in

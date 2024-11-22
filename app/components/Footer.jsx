@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             {/* Navigation */}
             <div>
-                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-4 text-center lg:text-left uppercase">Navigation</h3>
+                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Navigation</h3>
                 <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
                     <li><a href="#" className="hover-underline">Home</a></li>
                     <li><a href="#" className="hover-underline">About Us</a></li>
@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             {/* Services */}
             <div>
-                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-4 text-center lg:text-left uppercase">Services</h3>
+                <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Services</h3>
                 <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
                     <li><a href="#" className="hover-underline">Study Visa Consultation</a></li>
                     <li><a href="#" className="hover-underline">Visa Application Assistance</a></li>
@@ -30,7 +30,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-    <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-4 text-center lg:text-left uppercase">Our Expertise</h3>
+    <h3 className="text-lg font-bold text-orange-500 mb-1 md:mb-4 lg:mb-2 text-center lg:text-left uppercase">Our Expertise</h3>
     <ul className="space-y-2 text-center lg:text-left mb-6 md:mb-0 lg:mb-0">
         <li><a href="#" className="hover-underline">Immigration Support</a></li>
         <li><a href="#" className="hover-underline">Career Counseling for Students</a></li>
@@ -61,8 +61,8 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 mt-10 w-full md:w-auto">
-            <p className="text-gray-300 font-semibold">Email: <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
-            <p className="mt-2 font-semibold text-gray-300">CONTACT: <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
+            <p className="text-gray-300 font-semibold">Email : <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
+            <p className="mt-2 font-semibold text-gray-300">CONTACT : <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
           </div>
             </div>
         </div>

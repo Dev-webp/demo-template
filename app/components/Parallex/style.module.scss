@@ -1,25 +1,13 @@
 .gallery {
   height: 175vh;
   // background: #fa8322;
-  background: url('/rose-petals.png') no-repeat center top / cover;
+  background: url('/rose-petals.webp') no-repeat center top / cover;
   position: relative;
   display: flex;
   gap: 2vw;
   padding: 2vw;
   box-sizing: border-box;
   overflow: hidden;
-
-  /* Add overlay */
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: rgba(0, 0, 0, 0.288); 
-  //   z-index: 1; 
-  // }
 
   .column {
     position: relative;
@@ -35,7 +23,7 @@
       height: 300px; /* Adjust height as needed */
       background-color: rgb(255, 255, 255);
       border-radius: 1vw;
-      border: 1px solid; /* Black border */
+      border: 1px solid #949494; /* Black border */
       display: flex;
       flex-direction: column; /* Ensures name and text stack vertically */
       justify-content: center;
@@ -59,6 +47,14 @@
       font-weight: bold;
       margin-top: 10px; /* Adds space between text and name */
     }
+
+    .stars {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #ffd700; /* Gold color for stars */
+  margin: 5px 0; /* Add some spacing */
+  text-align: center; /* Center align stars */
+}
+
     
     }
 
@@ -79,4 +75,74 @@
 
 .spacer {
   height: 10vh;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    height: 175vh;
+    // background: #fa8322;
+    background: url('/rose-petals.png') no-repeat center top / cover;
+    position: relative;
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+  
+    .column {
+      position: relative;
+      height: 100%;
+      width: 20%;
+      min-width: 230px;
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      z-index: 2; /* Ensures content is above the overlay */
+  
+      .gridItem {
+        height: 200px; /* Adjust height as needed */
+        background-color: rgb(255, 255, 255);
+        border-radius: 1vw;
+        border: 1px solid; /* Black border */
+        display: flex;
+        flex-direction: column; /* Ensures name and text stack vertically */
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 10px;
+      
+      
+      .text {
+        font-size: 0.8rem; /* Adjust size as needed */
+        color: #333; /* Text color */
+        text-align: center;
+        font-weight: 200;
+        font-style: italic;
+      }
+      
+      .name {
+        font-size: 0.5rem; /* Adjust size as needed */
+        color: #ff6e14; /* Slightly muted color for the name */
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px; /* Adds space between text and name */
+      }
+      
+      }
+  
+      &:nth-of-type(1) {
+        top: -45%;
+      }
+      &:nth-of-type(2) {
+        top: -85%;
+      }
+      &:nth-of-type(3) {
+        top: -45%;
+      }
+      &:nth-of-type(4) {
+        top: -95%;
+      }
+    }
+  }
+
 }
