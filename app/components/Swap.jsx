@@ -50,7 +50,7 @@ const ContentSection = () => {
   >
     <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row-reverse gap-16 py-14 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50"
       style={{
-        backgroundImage: 'url(/liquid-cheese-2.png)',  // Replace with your background image
+        backgroundImage: 'url(/liquid-cheese-2.webp)',  // Replace with your background image
       }}
     >
       {/* Image Section */}

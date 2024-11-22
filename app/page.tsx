@@ -35,7 +35,7 @@ export default function Home() {
         <div className="h-[91rem] tablet:h-[40rem] lg:h-64"></div>
         <Scroll />
         <Two />
-        <div className="h-[83rem] tablet:h-[28rem] lg:h-36"></div>
+        <div className="h-[88rem] tablet:h-[28rem] lg:h-36"></div>
         <CTA />
         <Price />
         <SectionHeading title="What Our Customers Say" />
