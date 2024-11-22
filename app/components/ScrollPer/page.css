@@ -1,77 +1,33 @@
 .main-container {
-    position: relative;
-    height: 200vh;
+  position: relative;
+  height: 200vh;
 }
 
-/* General styles */
-.main-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-  
-  /* Section-specific styles */
-  .section2-container {
-    margin: 20px auto;
-    max-width: 100%;
-    padding: 10px;
-  }
-  
-  /* Mobile styles */
-  @media (max-width: 768px) {
-    .main-container {
-      padding: 10px;
-      gap: 15px;
-    }
-  
-    .section2-container {
-      margin: 10px auto;
-      padding: 5px;
-      max-width: 95%;
-      box-sizing: border-box;
-    }
-  
-    /* Adjust Features component styling */
-    .features-container {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    /* About component responsive styles */
-    .about-container {
-      padding: 10px;
-      font-size: 0.9rem; /* Scale down font size for smaller screens */
-    }
-  }
-  
-
-/* .section1 {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    background-color: #C72626; 
-    font-size: 3.5vw; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding-bottom: 10vh; 
+.section1 {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #C72626; /* Red color */
+  font-size: 3.5vw; /* Responsive font size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-bottom: 10vh; /* Responsive bottom padding */
 }
 
 .section1-content {
-    display: flex;
-    gap: 1rem; 
+  display: flex;
+  gap: 1rem; /* Gap between elements */
 }
 
 .image-container {
-    position: relative;
-    width: 12.5vw; 
-} */
-/* 
+  position: relative;
+  width: 12.5vw; /* Responsive width */
+}
+
 .section2 {
-    position: relative;
-    height: 100vh;
-} */
+  position: relative;
+  height: 100vh;
+}

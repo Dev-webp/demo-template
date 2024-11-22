@@ -70,18 +70,27 @@ const ContentSection = () => {
       {/* Content Section */}
       <motion.div
         variants={contentVariants} // Use the content-specific variants
-        className="md:w-1/2 space-y-12 text-gray-700"
+        className="md:w-1/2 space-y-6 text-gray-700"
       >
         <motion.h1
           variants={itemVariants} // Fade-in effect for each item
           className="text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 uppercase font-semibold text-2xl sm:text-3xl md:text-[2.50rem]"
         >
-          Your Trusted Partner in Immigration and Relocation
+          About US
         </motion.h1>
-        <motion.p variants={itemVariants}>
-          From skilled work visas to permanent residency, our team is dedicated to helping you secure a future abroad with ease and confidence. Let us guide you every step of the way through the complexities of the immigration process.
+        <motion.p variants={itemVariants} className="text-justify">
+        Welcome to VJC Overseas, a trusted name in the field of overseas education and immigration services. Founded in 2009, we began as a local firm with a simple yet powerful goal: to provide the highest quality services to students aspiring to study abroad and professionals seeking to build their careers overseas.
         </motion.p>
-        <motion.ul variants={contentVariants} className="space-y-4">
+        <motion.p variants={itemVariants} className="text-justify">
+        In 2015, we formally transitioned to a private limited company, allowing us to expand our services and strengthen our commitment to delivering personalised, reliable solutions. Since our founding, we have remained focused on continuously improving ourselves to meet the evolving needs of our clients.
+        </motion.p>
+        {/* <motion.p variants={itemVariants}>
+        We achieved a 5-star rating due to our comprehensive, reliable, and expert advice. We've helped thousands of people around the world to achieve their dreams of living and working in countries like the United States, Canada, Australia, etc..
+        </motion.p> */}
+        <motion.p variants={itemVariants} className="text-justify">
+        Each day, we strive to enhance the experience for every student and professional who walks through our doors, ensuring that their journey toward studying or settling abroad is as smooth and successful as possible.
+        </motion.p>
+        {/* <motion.ul variants={contentVariants} className="space-y-4">
           {[
             "Comprehensive Work Visa Solutions",
             "Family Sponsorship and Reunification Services",
@@ -98,13 +107,13 @@ const ContentSection = () => {
               {item}
             </motion.li>
           ))}
-        </motion.ul>
+        </motion.ul> */}
         <motion.div variants={itemVariants} className="flex">
           <Link
             href="#"
             className="px-6 h-11 flex items-center bg-orange-500 rounded-lg text-white"
           >
-            Start Your Immigration Journey Today
+            Learn How We Make It Happen
           </Link>
         </motion.div>
       </motion.div>

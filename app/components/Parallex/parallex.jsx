@@ -55,7 +55,7 @@ const Column = ({ y }) => {
           With our assistance, over 5,000 clients have successfully achieved their dream of studying or working abroad.
         </p>
         <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
-        <p className={styles.name}>- John Doe</p>
+        <p className={styles.name}>- Nandhini</p>
       </div>
 
       <div className={styles.gridItem}>
@@ -63,7 +63,7 @@ const Column = ({ y }) => {
           Thanks to VJC Overseas, I secured my student visa within weeks. The process was seamless, and their guidance was invaluable.
         </p>
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
-        <p className={styles.name}>- Sarah Lee</p>
+        <p className={styles.name}>- Abbas ahmed</p>
       </div>
 
       <div className={styles.gridItem}>
@@ -71,7 +71,7 @@ const Column = ({ y }) => {
           From consultation to visa approval, VJC Overseas made my family&apos;s immigration journey stress-free. Highly recommended.
         </p>
         <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
-        <p className={styles.name}>- Michael Green</p>
+        <p className={styles.name}>- Sridhar</p>
       </div>
 
       <div className={styles.gridItem}>
@@ -79,7 +79,7 @@ const Column = ({ y }) => {
           Our team has helped over 3,000 professionals relocate globally with the right work permits and immigration support.
         </p>
         <div className={styles.stars}>★★★★☆</div> {/* Add star ratings */}
-        <p className={styles.name}>- Emily Roberts</p>
+        <p className={styles.name}>- Varshini</p>
       </div>
     </motion.div>
   );

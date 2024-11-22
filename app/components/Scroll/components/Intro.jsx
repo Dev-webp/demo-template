@@ -23,15 +23,15 @@ export default function Hero() {
             {/* Hero Content */}
             <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
             <motion.h1
-                    className="text-[6vw] md:text-[4vw] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
+                    className="text-[6vw] md:text-[3vw] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                    About Us – VJC Overseas
+                    Turning your global dreams to reality with <br/> VJC Overseas
                 </motion.h1>
                 <motion.h1
-                    className="text-[3vw] md:text-[2vw] max-w-5xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
+                    className="text-[3vw] md:text-[1rem] max-w-5xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 drop-shadow-lg uppercase"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
@@ -40,12 +40,12 @@ export default function Hero() {
                 </motion.h1>
 
                 <motion.p
-                    className="mt-4 text-base md:text-xl text-gray-300 max-w-2xl"
+                    className="mt-4 text-base md:text-xl text-gray-300 max-w-3xl"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                    Founded in 2009, we began as a local firm with a simple yet powerful goal to provide the highest quality services to students aspiring to study abroad and professionals seeking to build their careers overseas. Our commitment to excellence has transformed us into a leading name in the industry.  
+                    At VJC Overseas, we feel that your international journey deserves the best guidance. We simplify the complex process with our experienced team on your side so that you don't have to face it alone. Up to now, we've already helped over 1,000 people achieve their global dreams and are now continuing our support for many more. So, let us be trusted partners in your journey towards a brighter future.  
                 </motion.p>
 
                 <motion.div

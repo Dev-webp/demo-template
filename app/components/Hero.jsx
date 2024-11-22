@@ -142,17 +142,17 @@ export default function HeroSection() {
     >
       <motion.h1
         variants={titleVariants}
-        className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-6xl"
+        className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem]"
       >
         <span className="text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600">
-          Making Global Dreams a Reality!
+        Your Dreams Are Our Blueprint for Success!
         </span>
       </motion.h1>
       <motion.p
         variants={desVariants}
         className="flex text-gray-900 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-none"
       >
-        At VJC OVERSEAS, we are committed to helping individuals and organizations achieve their goals with precision and efficiency. Our expert solutions are designed to meet your unique needs, ensuring seamless outcomes and lasting success.
+        Being India's Most Trusted Brand (2022 & 2024) and the Global Icon Award (2023), we do not just walk on the success trails; we make them. Your international aspirations are guided and managed at VJC Overseas with our track record and absolute commitment.
       </motion.p>
       <motion.div
         variants={containerVariants(0.6)}

@@ -1,4 +1,4 @@
-import { FaRegAddressCard, FaHandshake, FaGlobeAmericas, FaUsers } from "react-icons/fa";
+import { FaCommentDots, FaClipboardCheck, FaFileAlt, FaPaperPlane, FaMicrophone, FaPlaneDeparture } from 'react-icons/fa';
 import Link from "next/link";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 
@@ -35,27 +35,39 @@ const ServiceCard = ({ title, description, icon }) => {
 const services = [
   {
     id: 1,
-    title: "Continuous Improvement",
-    description: "We believe in the power of learning and evolving. Our team is committed to staying updated with the latest trends, policies, and opportunities in the field of international education and immigration.",
-    icon: <FaRegAddressCard />
+    title: "1. Counselling & Consultation",
+    description: "Let our consultation process guide you through your best choice of visa.",
+    icon: <FaCommentDots />
   },
   {
     id: 2,
-    title: "Client Satisfaction",
-    description: "Over the years, we have built a reputation for delivering exceptional service, and we are proud of the positive feedback we receive from our clients.",
-    icon: <FaHandshake />
+    title: "2. Eligibility Check",
+    description: "We evaluate your profile and qualifications to check if it meets the requirement for the visa.",
+    icon: <FaClipboardCheck />
   },
   {
     id: 3,
-    title: "Recognised Excellence",
-    description: "Our commitment to excellence has been recognised through numerous awards. In 2022, 2023, and 2024, we were honoured with the title of India’s Most Trusted Brand of the Year.",
-    icon: <FaGlobeAmericas />
+    title: "3. Documents Preparation",
+    description: "We can assist you in collecting, authenticating, and preparing all documents for an error-free application.",
+    icon: <FaFileAlt />
   },
   {
     id: 4,
-    title: "Excellence and Trust",
-    description: "For three consecutive years, we have worked tirelessly to maintain the highest standards and improve our services. This recognition is a reflection of the trust our clients place in us.",
-    icon: <FaUsers />
+    title: "4. Submission of Visa Application",
+    description: "We ensure that your application is submitted with every bit of detail required to be processed as soon as possible.",
+    icon: <FaPaperPlane />
+  },
+  {
+    id: 5,
+    title: "5. Interview Preparation",
+    description: "We guide you in all possible visa interview preparations so you are best prepared for the visa interview process.",
+    icon: <FaMicrophone />
+  },
+  {
+    id: 6,
+    title: "6. Visa Approval & Travel Services",
+    description: "Once the visa is approved, we provide services to help you travel without stress and make your move abroad very smooth.",
+    icon: <FaPlaneDeparture />
   },
 ];
 
@@ -66,14 +78,14 @@ const Features = () => {
         <div className="flex flex-col gap-5">
           <div className="space-y-4 max-w-4xl">
             {/* Fade-in for span */}
-            <motion.span
+            {/* <motion.span
               className="mx-auto w-max pl-5 uppercase font-semibold relative before:absolute before:w-4 before:h-0.5 before:rounded-md before:left-0 before:top-1/2 before:bg-orange-700  text-orange-600  text-2xl"
               initial={{ opacity: 0 }} // Start with 0 opacity
               whileInView={{ opacity: 1 }} // Fade in to full opacity when in view
               transition={{ duration: 1 }} // Duration of the fade-in
             >
               Why Choose VJC Overseas?
-            </motion.span>
+            </motion.span> */}
             {/* Fade-in for h1 */}
             <motion.h1
               className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600  dark:text-orange-500 md:text-4xl xl:text-5xl leading-tight uppercase"
@@ -81,7 +93,7 @@ const Features = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1}} // Add a delay for sequential fade-in
             >
-              At VJC Overseas, we are not just another service provider.
+              Easy Visa Process
             </motion.h1>
           </div>
           {/* Fade-in for paragraph */}
@@ -91,8 +103,8 @@ const Features = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }} // Add a slight delay for sequential fade-in
           >
-            We are a dedicated partner in your journey towards success abroad. Our team is passionate about ensuring that each client receives the support they need to make their dreams a reality.
-            We take great pride in the satisfaction of every student and professional we serve, and we are committed to putting in 100% effort to help you succeed.
+            
+            Your Roadmap to Getting a Visa Successfully
           </motion.p>
         </div>
 

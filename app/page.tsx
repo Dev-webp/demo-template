@@ -32,15 +32,16 @@ export default function Home() {
       {/* Lazy Load Non-Critical Content */}
       <Suspense fallback={<LoadingIndicator />}>
         <ScrollPer />
-        <div className="h-[91rem] tablet:h-[30rem] lg:h-64"></div>
+        <div className="h-[230rem] tablet:h-[30rem] lg:h-[40rem]"></div>
         <Scroll />
         <Two />
         <div className="h-[88rem] tablet:h-[28rem] lg:h-36"></div>
         <CTA />
-        <Price />
+        {/* <Price /> */}
+        <Blog />
         <SectionHeading title="What Our Customers Say" />
         <Parallex />
-        <Blog />
+        
         <FAQ />
       </Suspense>
 
