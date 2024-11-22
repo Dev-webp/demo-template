@@ -68,7 +68,7 @@ const Column = ({ y }) => {
 
       <div className={styles.gridItem}>
         <p className={styles.text}>
-          From consultation to visa approval, VJC Overseas made my family's immigration journey stress-free. Highly recommended.
+          From consultation to visa approval, VJC Overseas made my family&apos;s immigration journey stress-free. Highly recommended.
         </p>
         <div className={styles.stars}>★★★★★</div> {/* Add star ratings */}
         <p className={styles.name}>- Michael Green</p>
