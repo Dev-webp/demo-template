@@ -102,7 +102,7 @@ const ContentSection = () => {
         <motion.div variants={itemVariants} className="flex">
           <Link
             href="#"
-            className="px-5 h-11 flex items-center bg-orange-500 rounded-lg text-white"
+            className="px-6 h-11 flex items-center bg-orange-500 rounded-lg text-white"
           >
             Start Your Immigration Journey Today
           </Link>

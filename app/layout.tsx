@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Tawk.to Chat Widget */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -41,7 +41,7 @@ export default function RootLayout({
               })();
             `,
           }}
-        />
+        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

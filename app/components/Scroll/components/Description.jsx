@@ -4,7 +4,7 @@ import { FaRegHandshake, FaUserGraduate, FaFileAlt } from "react-icons/fa";
 
 export default function Description() {
     return (
-        <div className="relative flex justify-center items-center py-60 md:py-32 lg:py-32 bg-gradient-to-br from-orange-500 to-red-600 text-white overflow-hidden">
+        <div className="relative flex justify-center items-center py-24 md:py-32 lg:py-32 bg-gradient-to-br from-orange-500 to-red-600 text-white overflow-hidden">
             {/* Background Accent */}
             <div className="absolute inset-0 opacity-30">
                 <svg

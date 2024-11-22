@@ -42,8 +42,8 @@ const Footer = () => {
                 
             {/* Social Media */}
             <div>
-                <h3 className="text-lg font-bold text-orange-500 mb-4 uppercase">Follow Us</h3>
-                <div className="flex space-x-4 ml-36 md:ml-0 lg:ml-0">
+                <h3 className="text-lg font-bold text-orange-500 mb-4 uppercase text-center">Follow Us</h3>
+                <div className="flex space-x-4 text-center justify-center">
                     <a href="#" className="group">
                         <FaFacebook className="text-white group-hover:text-orange-500" />
                     </a>
@@ -60,7 +60,7 @@ const Footer = () => {
                         <FaYoutube className="text-white group-hover:text-orange-500" />
                     </a>
                 </div>
-                <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 mt-10 w-full md:w-auto">
+                <div className="flex flex-col items-center justify-center md:items-start mb-6 md:mb-0 mt-10 w-full md:w-auto">
             <p className="text-gray-300 font-semibold">Email : <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
             <p className="mt-2 font-semibold text-gray-300">CONTACT : <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
           </div>

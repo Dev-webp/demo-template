@@ -80,69 +80,66 @@
 @media (max-width: 768px) {
   .gallery {
     height: 175vh;
-    // background: #fa8322;
     background: url('/rose-petals.webp') no-repeat center top / cover;
     position: relative;
     display: flex;
+    flex-direction: column; /* Stack the columns vertically */
     gap: 2vw;
     padding: 2vw;
     box-sizing: border-box;
     overflow: hidden;
-  
-    .column {
-      position: relative;
-      height: 100%;
-      width: 20%;
-      min-width: 230px;
-      display: flex;
-      flex-direction: column;
-      gap: 2vw;
-      z-index: 2; /* Ensures content is above the overlay */
-  
-      .gridItem {
-        height: 200px; /* Adjust height as needed */
-        background-color: rgb(255, 255, 255);
-        border-radius: 1vw;
-        border: 1px solid; /* Black border */
-        display: flex;
-        flex-direction: column; /* Ensures name and text stack vertically */
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        padding: 10px;
-      
-      
-      .text {
-        font-size: 0.8rem; /* Adjust size as needed */
-        color: #333; /* Text color */
-        text-align: center;
-        font-weight: 200;
-        font-style: italic;
-      }
-      
-      .name {
-        font-size: 0.5rem; /* Adjust size as needed */
-        color: #ff6e14; /* Slightly muted color for the name */
-        text-align: center;
-        font-weight: bold;
-        margin-top: 10px; /* Adds space between text and name */
-      }
-      
-      }
-  
-      &:nth-of-type(1) {
-        top: -45%;
-      }
-      &:nth-of-type(2) {
-        top: -85%;
-      }
-      &:nth-of-type(3) {
-        top: -45%;
-      }
-      &:nth-of-type(4) {
-        top: -95%;
-      }
-    }
+    justify-content: center; /* Vertically center the columns */
+    align-items: center; /* Horizontally center the columns */
   }
 
+  .column {
+    position: relative;
+    height: auto; /* Let the height adjust automatically */
+    width: 100%; /* Full width of the gallery */
+    min-width: 350px; /* Ensures column doesn't shrink too much */
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    gap: 2vw;
+    z-index: 2; /* Ensures content is above the overlay */
+    justify-content: center; /* Vertically centers the items */
+    align-items: center; /* Horizontally centers the items */
+  }
+
+  .gridItem {
+    height: 150px; /* Adjust height as needed */
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vw;
+    border: 1px solid; /* Black border */
+    display: flex;
+    flex-direction: column; /* Ensures name and text stack vertically */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+  }
+
+  .text {
+    font-size: 0.8rem; /* Adjust size as needed */
+    color: #333; /* Text color */
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .name {
+    font-size: 0.5rem; /* Adjust size as needed */
+    color: #ff6e14; /* Slightly muted color for the name */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px; /* Adds space between text and name */
+  }
+  
+  /* Optional: Adjust the top positions for each column to stack properly */
+  .column:nth-of-type(1),
+  .column:nth-of-type(2),
+  .column:nth-of-type(3),
+  .column:nth-of-type(4) {
+    top: auto; /* Reset top positioning for vertical stacking */
+  }
 }
+

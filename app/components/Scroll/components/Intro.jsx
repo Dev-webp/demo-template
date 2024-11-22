@@ -54,10 +54,10 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7, duration: 0.8 }}
                 >
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition-all">
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 ml-4 md:ml-0 lg:ml-0 rounded-lg shadow-lg transition-all">
                         Explore Services
                     </button>
-                    <button className="bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition-all">
+                    <button className="bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-2 px-6 mt-4 md:mt-0 lg:mt-0 rounded-lg shadow-lg transition-all">
                         Contact Our Experts
                     </button>
                 </motion.div>
