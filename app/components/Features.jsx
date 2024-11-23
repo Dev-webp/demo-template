@@ -135,7 +135,7 @@ const Features = () => {
               damping: 30,
             }}
           >
-           VJC Overseas empowers you to achieve your international dreams. We provide a service that helps you achieve what you've always dreamed of, either you want to study at a world-renowned university, immigrate for better career prospects, or explore work opportunities abroad. Our expert team leads  you to take  personalised solutions which helps in your journey  smooth and stress-free. Trust our expertise, proven processes, and commitment to excellence as we help you take the next step toward a bright global future.
+           VJC Overseas empowers you to achieve your international dreams. We provide a service that helps you achieve what you&apos;ve always dreamed of, either you want to study at a world-renowned university, immigrate for better career prospects, or explore work opportunities abroad. Our expert team leads  you to take  personalised solutions which helps in your journey  smooth and stress-free. Trust our expertise, proven processes, and commitment to excellence as we help you take the next step toward a bright global future.
           </motion.p>
         </motion.div>
   

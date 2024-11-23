@@ -13,7 +13,7 @@ const Scroll = dynamic(() => import('@/app/components/Scroll/index'));
 const Two = dynamic(() => import('@/app/components/2/Index'));
 const CTA = dynamic(() => import('@/app/components/CTA'));
 const FAQ = dynamic(() => import('@/app/components/FAQ'));
-const Price = dynamic(() => import('@/app/components/Price'));
+// const Price = dynamic(() => import('@/app/components/Price'));
 const Blog = dynamic(() => import('@/app/components/Blog'));
 
 // Utility function for scroll-to-top

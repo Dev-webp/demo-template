@@ -45,7 +45,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                    At VJC Overseas, we feel that your international journey deserves the best guidance. We simplify the complex process with our experienced team on your side so that you don't have to face it alone. Up to now, we've already helped over 1,000 people achieve their global dreams and are now continuing our support for many more. So, let us be trusted partners in your journey towards a brighter future.  
+                    At VJC Overseas, we feel that your international journey deserves the best guidance. We simplify the complex process with our experienced team on your side so that you don&apos;t have to face it alone. Up to now, we&apos;ve already helped over 1,000 people achieve their global dreams and are now continuing our support for many more. So, let us be trusted partners in your journey towards a brighter future.  
                 </motion.p>
 
                 <motion.div

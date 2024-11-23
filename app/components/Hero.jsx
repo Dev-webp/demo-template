@@ -152,7 +152,7 @@ export default function HeroSection() {
         variants={desVariants}
         className="flex text-gray-900 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-none"
       >
-        Being India's Most Trusted Brand (2022 & 2024) and the Global Icon Award (2023), we do not just walk on the success trails; we make them. Your international aspirations are guided and managed at VJC Overseas with our track record and absolute commitment.
+        Being India&apos;s Most Trusted Brand (2022 & 2024) and the Global Icon Award (2023), we do not just walk on the success trails; we make them. Your international aspirations are guided and managed at VJC Overseas with our track record and absolute commitment.
       </motion.p>
       <motion.div
         variants={containerVariants(0.6)}

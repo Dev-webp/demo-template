@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import Link from "next/link";
-import { FaCheckCircle } from 'react-icons/fa'; // Import the more attractive check circle icon
+import { FaCheckCircle } from 'react-icons/fa'; 
 
 // Variants for the content
 const contentVariants = {
@@ -71,7 +70,7 @@ const ContentSection = () => {
       </motion.h1>
 
       <motion.p variants={itemVariants} className="text-justify">
-      With our wide spectrum of services, you may be wondering, "What can VJC Overseas do for me?" And the answer will be very simple: we are here to help you take the next step in your journey—whether you are here to study abroad, migrate to some other country, work overseas, or are investing in new opportunities.
+      With our wide spectrum of services, you may be wondering, &quot;What can VJC Overseas do for me?&quot; And the answer will be very simple: we are here to help you take the next step in your journey—whether you are here to study abroad, migrate to some other country, work overseas, or are investing in new opportunities.
       </motion.p>
 
       
