@@ -18,7 +18,7 @@ export default function Section() {
         style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
         >
             <div className='relative z-10 py-20 px-0 mix-blend-difference text-white w-full h-full flex flex-col justify-between'>
-                <p className='w-[49vw] text-[2vw] uppercase mix-blend-difference ml-[42rem]'>Building dreams and achieving success requires patience, precision, and the right guidance.</p>
+                <p className='w-[49vw] text-[2vw] uppercase mix-blend-difference ml-[42rem] tablet:ml-[60rem] lg:ml-[40rem]'>Building dreams and achieving success requires patience, precision, and the right guidance.</p>
                 <p className='text-[6vw] lg:text-[5vw] uppercase mix-blend-difference ml-4 lg:ml-8'>Empowering Your Journey</p>
             </div>
 

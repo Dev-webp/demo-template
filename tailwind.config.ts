@@ -12,7 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      screens: {
+       screens: {
         tablet: '800px',
       },
     },

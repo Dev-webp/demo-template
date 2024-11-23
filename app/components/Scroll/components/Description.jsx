@@ -43,7 +43,7 @@ export default function Description() {
             </div>
 
             {/* Boxes with Hover Effects */}
-            <div className="relative hidden sm:flex justify-center gap-4 mt-12 mr-4">
+            <div className="relative hidden  lg:flex  justify-center gap-4 mt-12 mr-4">
     {/* Box 1 */}
     <div className="relative w-60 h-72 bg-white rounded-lg shadow-lg overflow-hidden group hover:translate-y-[-10px] transition-all">
         {/* Icon Container */}

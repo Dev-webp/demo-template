@@ -4,13 +4,12 @@ import React, { useEffect, Suspense } from "react";
 import dynamic from "next/dynamic";
 import Hero from "@/app/components/Hero";
 import Footer from "@/app/components/Footer";
-import { FaWhatsapp } from 'react-icons/fa';
 
 // Dynamic Imports
 const ScrollPer = dynamic(() => import('@/app/components/ScrollPer/index'));
 const Parallex = dynamic(() => import('@/app/components/Parallex/parallex'));
 const Scroll = dynamic(() => import('@/app/components/Scroll/index'));
-const Two = dynamic(() => import('@/app/components/2/Index'));
+const ScrollPerRev = dynamic(() => import('@/app/components/ScrollPerRev/Index'));
 const CTA = dynamic(() => import('@/app/components/CTA'));
 const FAQ = dynamic(() => import('@/app/components/FAQ'));
 // const Price = dynamic(() => import('@/app/components/Price'));
@@ -32,10 +31,10 @@ export default function Home() {
       {/* Lazy Load Non-Critical Content */}
       <Suspense fallback={<LoadingIndicator />}>
         <ScrollPer />
-        <div className="h-[230rem] tablet:h-[30rem] lg:h-[36rem]"></div>
+        <div className="h-[230rem] tablet:h-[105rem] lg:h-[36rem]"></div>
         <Scroll />
-        <Two />
-        <div className="h-[108rem] tablet:h-[28rem] lg:h-6"></div>
+        <ScrollPerRev />
+        <div className="h-[108rem] tablet:h-[38rem] lg:h-6"></div>
         <CTA />
         {/* <Price /> */}
         <Blog />
@@ -44,33 +43,17 @@ export default function Home() {
         
         <FAQ />
       </Suspense>
-
-      {/* Footer */}
       <Footer />
-
-      {/* WhatsApp Floating Icon */}
-      <FloatingWhatsApp />
     </>
   );
 }
 
 // Components
 const LoadingIndicator = () => (
-  <div className="loading-indicator">
-    Loading...
-    <style jsx>{`
-      .loading-indicator {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-size: 1.5rem;
-        color: #333;
-      }
-    `}</style>
+  <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
-
 
 const SectionHeading: React.FC<{ title: string }> = ({ title }) => (
   <div className="section-heading">
@@ -85,29 +68,3 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => (
 
 
 
-const FloatingWhatsApp = () => (
-  <a
-    href="https://wa.me/+919160449000"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="whatsapp-icon"
-  >
-    <FaWhatsapp size={30} color="white" />
-    <style jsx>{`
-      .whatsapp-icon {
-        position: fixed;
-        bottom: 23px;
-        left: 20px;
-        background-color: #25d366;
-        padding: 10px;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        z-index: 9999;
-      }
-      .whatsapp-icon:hover {
-        transform: scale(1.1);
-      }
-    `}</style>
-  </a>
-);

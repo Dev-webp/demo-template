@@ -60,9 +60,9 @@ const Footer = () => {
                         <FaYoutube className="text-white group-hover:text-orange-500" />
                     </a>
                 </div>
-                <div className="flex flex-col items-center justify-center md:items-start mb-6 md:mb-0 mt-10 w-full md:w-auto">
+                <div className="flex flex-col items-center justify-center md:items-start mb-6 md:mb-0 mt-10 w-full md:w-auto ml-0 tablet:ml-20 md:ml-0 lg:ml-0">
             <p className="text-gray-300 font-semibold">Email : <a href="mailto:info@vjcoverseas.com" className="hover:text-saffron">info@vjcoverseas.com</a></p>
-            <p className="mt-2 font-semibold text-gray-300">CONTACT : <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
+            <p className="mt-2 font-semibold text-gray-300 ml-0 tablet:ml-2 md:ml-0 lg:ml-0">CONTACT : <a href="tel:+919160449000" className="hover:text-saffron">+91 9160449000</a></p>
           </div>
             </div>
         </div>
@@ -129,7 +129,7 @@ const Footer = () => {
             <p>5th Block, Koramangala,</p>
             <p>Bangalore, India, 560095</p>
             {/* Google Map */}
-            <div className="mt-4">
+            <div className="mt-4 tablet:mt-20 lg:mt-4">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.695142720451!2d77.6166214150411!3d12.935175190879746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c3ad0cc183%3A0x65c2d7b95c7a8e13!2sRaheja%20Arcade%2C%20Koramangala%205th%20Block%2C%20Bengaluru%2C%20Karnataka%20560095!5e0!3m2!1sen!2sin!4v1609591965873!5m2!1sen!2sin"
                     width="100%"
