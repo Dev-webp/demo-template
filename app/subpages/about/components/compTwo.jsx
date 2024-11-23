@@ -1,23 +1,5 @@
 import Image from "next/image";
- 
-const iconRender = (val) => {
-switch (val) {
-    case "cross":
-        return (
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                <path fillRule="evenodd" d="M2 3a1 1 0 00-1 1v1a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1H2zm0 4.5h16l-.811 7.71a2 2 0 01-1.99 1.79H4.802a2 2 0 01-1.99-1.79L2 7.5zM10 9a.75.75 0 01.75.75v2.546l.943-1.048a.75.75 0 111.114 1.004l-2.25 2.5a.75.75 0 01-1.114 0l-2.25-2.5a.75.75 0 111.114-1.004l.943 1.048V9.75A.75.75 0 0110 9z" clipRule="evenodd" />
-            </svg>
-        )
-    case "sync":
-        return (
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                <path fillRule="evenodd" d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z" clipRule="evenodd" />
-            </svg>
-        )
-    default:
-        return <>No Icon</>;
-}
-}
+
  
 const FeatureItem = ({ id, title, description, advantages, icon, image }) => {
 return (
@@ -110,7 +92,7 @@ return (
                 <div className="absolute bottom-[0rem] lg:-bottom-[60rem] left-[68rem] w-64 h-64 bg-orange-600 rounded-full opacity-20"></div>
                 <div className="absolute bottom-[0rem] lg:-bottom-[89rem] left-[0rem] w-64 h-64 bg-orange-600 rounded-full opacity-20"></div>
                 <p className="text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
-                At VJC Overseas, we offer more than just services; we provide tailored solutions that streamline your international journey. Whether you're seeking educational opportunities, career advancements, or immigration advice, our expertise and tools will help you achieve your goals with confidence and ease.
+                At VJC Overseas, we offer more than just services; we provide tailored solutions that streamline your international journey. Whether you&apos;re seeking educational opportunities, career advancements, or immigration advice, our expertise and tools will help you achieve your goals with confidence and ease.
                 </p>
 
                 </div>
