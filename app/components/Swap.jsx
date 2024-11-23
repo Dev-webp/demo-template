@@ -50,7 +50,7 @@ const ContentSection = () => {
   >
     <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row-reverse gap-16 py-14 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50"
       style={{
-        backgroundImage: 'url(/liquid-cheese-2.webp)',  // Replace with your background image
+        backgroundImage: 'url(/comp-1.webp)',  // Replace with your background image
       }}
     >
       {/* Image Section */}
@@ -59,7 +59,7 @@ const ContentSection = () => {
         className="flex md:flex-1"
       >
         <Image
-          src="/vjc-3.png"
+          src="/vjc-2.webp"
           alt="Immigration support services"
           width={1300}
           height={900}

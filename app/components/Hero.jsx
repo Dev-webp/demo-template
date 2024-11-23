@@ -116,7 +116,7 @@ export default function HeroSection() {
     <motion.div
       className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
       style={{
-        backgroundImage: 'url(/7.webp)',
+        backgroundImage: 'url(/banner.webp)',
       }}
       animate={{
         y: ['0%', '5%'],  
@@ -254,7 +254,7 @@ export default function HeroSection() {
 
       <div className="w-3/5 h-[80%] rounded-3xl overflow-clip border-8 border-gray-200 z-10 ml-60 mt-10">
         <Image
-          src="/7.webp"
+          src="/banner.webp"
           alt="building plan image"
           width={1300}
           height={1300}

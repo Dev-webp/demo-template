@@ -20,12 +20,12 @@ const ServiceCard = ({ title, description, icon }) => {
     <p className="text-gray-700 text-justify line-clamp-3">
       {description}
     </p>
-    <Link href="#" className="text-sky-700 flex items-center gap-x-3 w-max">
+    {/* <Link href="#" className="text-sky-700 flex items-center gap-x-3 w-max">
       Get a free consultation
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
         <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
       </svg>
-    </Link>
+    </Link> */}
   </div>
 </div>
 
@@ -72,69 +72,81 @@ const services = [
 ];
 
 const Features = () => {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.2 },
+    },
+  };
   return (
-    <section className="py-10" style={{ backgroundImage: 'url(/subtle-prism-2.png)' }}>
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col items-start gap-10 xl:gap-14">
-        <div className="flex flex-col gap-5">
-          <div className="space-y-4 max-w-4xl">
-            {/* Fade-in for span */}
-            {/* <motion.span
-              className="mx-auto w-max pl-5 uppercase font-semibold relative before:absolute before:w-4 before:h-0.5 before:rounded-md before:left-0 before:top-1/2 before:bg-orange-700  text-orange-600  text-2xl"
-              initial={{ opacity: 0 }} // Start with 0 opacity
-              whileInView={{ opacity: 1 }} // Fade in to full opacity when in view
-              transition={{ duration: 1 }} // Duration of the fade-in
-            >
-              Why Choose VJC Overseas?
-            </motion.span> */}
-            {/* Fade-in for h1 */}
-            <motion.h1
-              className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600  dark:text-orange-500 md:text-4xl xl:text-5xl leading-tight uppercase"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1}} // Add a delay for sequential fade-in
-            >
-              Easy Visa Process
-            </motion.h1>
-          </div>
-          {/* Fade-in for paragraph */}
-          <motion.p
-            className="text-gray-700"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }} // Add a slight delay for sequential fade-in
-          >
-            
-            Your Roadmap to Getting a Visa Successfully
-          </motion.p>
-        </div>
+    <section
+  className="py-10"
+  style={{ backgroundImage: 'url(/comp-22.webp)' }}
+>
+  <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col items-start gap-10 xl:gap-14">
+    <div className="flex flex-col gap-5">
+      <div className="space-y-4 max-w-4xl">
+        <motion.h1
+          className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600  dark:text-orange-500 md:text-4xl xl:text-5xl leading-tight uppercase"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Easy Visa Process
+        </motion.h1>
+      </div>
+      <motion.p
+        className="text-gray-700"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Your Roadmap to Getting a Visa Successfully
+      </motion.p>
+    </div>
 
-        {/* Fade-in for Service Cards */}
+    <motion.div
+      className="grid sm:grid-cols-2 gap-6 md:gap-4"
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { staggerChildren: 0.1 }
+        }
+      }}
+    >
+      {services.map((service) => (
         <motion.div
-          className="grid sm:grid-cols-2 gap-6 md:gap-4"
-          initial="hidden"
-          whileInView="visible"
+          key={service.id}
           variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: { staggerChildren: 0.1 } // Stagger the fade-in of service cards
-            }
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
           }}
         >
-          {services.map(service => (
-            <motion.div
-              key={service.id}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-              }}
-            >
-              <ServiceCard {...service} />
-            </motion.div>
-          ))}
+          <ServiceCard {...service} />
         </motion.div>
-      </div>
-    </section>
+      ))}
+    </motion.div>
+
+    {/* Centering the button */}
+    <motion.div
+      variants={itemVariants}
+      className="flex justify-center items-center w-full"
+    >
+      <Link
+        href="#"
+        className="px-6 h-11 flex items-center bg-orange-500 rounded-lg text-white"
+      >
+        Book Free Consultation
+      </Link>
+    </motion.div>
+  </div>
+</section>
+
   );
 };
 

@@ -44,12 +44,12 @@ const ContentSection = () => {
 >
   <div className="max-w-[85rem] mx-auto px-5 sm:px-10 md:px-12 lg:px-10 flex flex-col md:flex-row gap-16 py-10 rounded-2xl bg-gradient-to-bl from-orange-50 to-orange-50"
     style={{
-      backgroundImage: 'url(/liquid-cheese-2.webp)',  // Replace with your background image
+      backgroundImage: 'url(/comp-1.webp)',  // Replace with your background image
     }}>
     {/* Image Section */}
     <motion.div variants={imageVariants} className="flex md:flex-1">
       <Image
-        src="/vjc-1.png"
+        src="/vjc-1.webp"
         alt="Visa consultation services"
         width={1000}
         height={1000}

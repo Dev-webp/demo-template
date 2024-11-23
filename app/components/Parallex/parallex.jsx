@@ -17,6 +17,7 @@ export default function Parallex() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
+  
 
   useEffect(() => {
     const resize = () => {

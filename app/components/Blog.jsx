@@ -45,7 +45,7 @@ const posts = [
  
 const BlogSection = () => {
 return (
-    <section className="py-20" style={{ backgroundImage: 'url(/subtle-prism-2.png)' }}>
+    <section className="py-20" style={{ backgroundImage: 'url(/comp-22.webp)' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-14">
             <div className="text-center space-y-6 max-w-2xl mx-auto">
                 <h1 className="text-[2.50rem] font-bold text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600  uppercase">Latest Immigration Insights</h1>

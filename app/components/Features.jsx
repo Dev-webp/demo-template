@@ -6,56 +6,56 @@ import { useInView } from 'react-intersection-observer'; // Hook to detect if th
 const features = [
   {
     id: 1,
-    image: "/s1.png",
+    image: "/s1.webp",
     title: "PR Visa",
     description: "Premium Immigration Services For PR Visas To Australia, Canada, New Zealand Etc. So, let us walk you through it to make the process as easy as it can ever be!",
     buttonLabel: "Read More",
   },
   {
     id: 2,
-    image: "/s2.png",
+    image: "/s2.webp",
     title: "Student Visa",
     description: "Apply for student visas from the hands of an experienced professional team. We provide seamless access to your global study.",
     buttonLabel: "Read More",
   },
   {
     id: 3,
-    image: "/s3.png",
+    image: "/s3.webp",
     title: "Jobseeker Visa",
     description: "Get started now to open doors with our three-step Jobseeker Visa services that speak for themselves. Your international career starts here.",
     buttonLabel: "Read More",
   },
   {
     id: 4,
-    image: "/s4.png",
+    image: "/s4.webp",
     title: "Visit Visa",
     description: "Visit and dependent visa processing across the globe in a matter of days. Find the confidence and convenience to travel as you please.",
     buttonLabel: "Read More",
   },
   {
     id: 5,
-    image: "/s5.png",
+    image: "/s5.webp",
     title: "Coaching",
     description: "Get a high score with guidance from our certified English language specialists. We are experienced in giving Success strategies that are proven to work for your exams.",
     buttonLabel: "Read More",
   },
   {
     id: 6,
-    image: "/s6.png",
+    image: "/s6.webp",
     title: "Investor Visa",
     description: "Work With Us For Stress Free Processing Of Investor Visa To Top European Nations Get motivated to plan your overseas future with us.",
     buttonLabel: "Read More",
   },
   {
     id: 7,
-    image: "/s7.png",
+    image: "/s7.webp",
     title: "Resume Marketing",
     description: "Get your resume marketed internationally by us at a cost-effective price and elevate the chances of you getting a job there. Stand out to global hiring managers.",
     buttonLabel: "Read More",
   },
   {
     id: 8,
-    image: "/s8.png",
+    image: "/s8.webp",
     title: "Air ticketing",
     description: "Make your travel planning easier with our ticketing and passport services. We take care of everything for a stress-free trip.",
     buttonLabel: "Read More",
@@ -91,7 +91,7 @@ const Features = () => {
   });
 
   return (
-    <section className="py-10" style={{ backgroundImage: 'url(/subtle-prism.png)' }}>
+    <section className="py-10" style={{ backgroundImage: 'url(/comp-21.webp)' }}>
     <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
       <div className="flex flex-col space-y-10">
         {/* Heading section with animations */}
