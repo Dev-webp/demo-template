@@ -1,7 +1,6 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from "framer-motion"; // Import framer-motion
 import { containerVariants, titleVariants, desVariants } from "@/app/animation"; // Adjust the path as needed
 
