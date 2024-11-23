@@ -33,8 +33,17 @@ export default function Parallex() {
   }, []);
 
   return (
+    <> 
+    <div className="section-heading">
+    <h1
+      className="text-[2.75rem] font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 
+        md:text-4xl xl:text-5xl leading-tight text-center mt-10 mb-4"
+    >
+      What Our Customers Say
+    </h1>
+  </div>
     <main className={styles.main}>
-      <div className={styles.spacer}></div>
+      {/* <div className={styles.spacer}></div> */}
       <div ref={gallery} className={styles.gallery}>
         <Column y={y} />
         <Column y={y2} />
@@ -43,6 +52,8 @@ export default function Parallex() {
       </div>
       <div className={styles.spacer}></div>
     </main>
+    </>
+
   );
 }
 

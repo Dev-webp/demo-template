@@ -38,7 +38,6 @@ export default function Home() {
         <CTA />
         {/* <Price /> */}
         <Blog />
-        <SectionHeading title="What Our Customers Say" />
         <Parallex />
         
         <FAQ />
@@ -55,16 +54,6 @@ const LoadingIndicator = () => (
   </div>
 );
 
-const SectionHeading: React.FC<{ title: string }> = ({ title }) => (
-  <div className="section-heading">
-    <h1
-      className="text-[2.75rem] font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-600 
-        md:text-4xl xl:text-5xl leading-tight text-center mt-10"
-    >
-      {title}
-    </h1>
-  </div>
-);
 
 
 
