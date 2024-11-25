@@ -81,16 +81,27 @@ const features = [
  
 const Features = () => {
 return (
-    <section className="py-8">
+    <section className="py-8 relative">
+        {/* Background image using Next.js Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/comp-1.webp" // Replace with the actual path to your image
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={75} // Adjust quality for performance
+          priority // Ensures the image loads quickly
+        />
+      </div>
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
             <div className="flex flex-col  space-y-16">
                 <div className="flex flex-col justify-center text-center  mx-auto md:max-w-4xl space-y-5">
                 <h1 className="text-3xl font-semibold text-orange-500 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight uppercase">
                 Unlock Efficiency and Drive Success with Our<br/> Cutting-Edge Solutions
                 </h1>
-                <div className="absolute bottom-[0rem] lg:-bottom-[35rem] left-[0rem] w-64 h-64 bg-orange-600 rounded-full opacity-20"></div>
+                {/* <div className="absolute bottom-[0rem] lg:-bottom-[35rem] left-[0rem] w-64 h-64 bg-orange-600 rounded-full opacity-20"></div>
                 <div className="absolute bottom-[0rem] lg:-bottom-[60rem] left-[68rem] w-64 h-64 bg-orange-600 rounded-full opacity-20"></div>
-                <div className="absolute bottom-[0rem] lg:-bottom-[89rem] left-[0rem] w-64 h-64 bg-orange-600 rounded-full opacity-20"></div>
+                <div className="absolute bottom-[0rem] lg:-bottom-[89rem] left-[0rem] w-64 h-64 bg-orange-600 rounded-full opacity-20"></div> */}
                 <p className="text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
                 At VJC Overseas, we offer more than just services; we provide tailored solutions that streamline your international journey. Whether you&apos;re seeking educational opportunities, career advancements, or immigration advice, our expertise and tools will help you achieve your goals with confidence and ease.
                 </p>

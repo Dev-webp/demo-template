@@ -42,7 +42,8 @@ const Section1 = ({ scrollYProgress }) => {
       scale,
       rotate,
       transformOrigin, // Apply transform origin to center the scaling
-    }} >
+    }} 
+    >
       
       <Features/>
     </motion.div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ServiceSection = () => {
   return (
-    <section className="py-20 " style={{ backgroundImage: 'url(/subtle-prism.png)' }}>
+    <section className="py-20 " style={{ backgroundImage: 'url(/comp-1.webp)' }}>
   <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -41,7 +41,7 @@ const ServiceSection = () => {
           {
             id: 1,
             title: "Visa Consultation",
-            description: "We guide you through the entire process, from eligibility assessment to documentation submission, ensuring that your application stands the best chance of success.",
+            description: "We guide you through the entire process, from eligibility assessment to documentation submission, ensuring that your application stands the success.",
             recommended: false,
           },
           {
@@ -65,7 +65,7 @@ const ServiceSection = () => {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
             }}
-            className={`relative rounded-lg border bg-white p-6 sm:p-10 space-y-6 shadow-xl hover:shadow-2xl hover:border-gray-200 hover:-translate-y-2 transition duration-300 ${
+            className={`relative rounded-lg border bg-white h-96 p-6 sm:p-10 space-y-6 shadow-xl hover:shadow-2xl hover:border-gray-200 hover:-translate-y-2 transition duration-300 ${
               service.recommended
                 ? "bg-gray-100 shadow-gray-200/40"
                 : "shadow-transparent"
@@ -84,7 +84,7 @@ const ServiceSection = () => {
                 {service.description}
               </p>
             </div>
-            <div className="flex relative py-3 before:absolute before:top-1/2 before:inset-0 before:h-px before:bg-gray-200" />
+            <div className="flex relative py-1 before:absolute before:top-1/2 before:inset-0 before:h-px before:bg-gray-200" />
             <div className="flex justify-center">
               <Link
                 href="#"

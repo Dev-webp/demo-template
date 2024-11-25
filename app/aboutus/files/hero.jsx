@@ -1,33 +1,83 @@
+"use client"
 import React from 'react';
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { containerVariants } from "../../animation";
+import Nav from "@/app/components/nav";
 
+
+const fadeInVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+    bgFade: {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          duration: 1.2, // Adjust the duration for smoothness
+          ease: "easeInOut",
+        },
+      },
+    },
+  };
+  
 const CompOne = () => {
   return (
+    <>
+    <Nav/>
     <section className="py-4 lg:py-0 mt-2 md:mt-0 lg:mt-0 bg-gradient-to-bl from-white to-white">
-      <div
+      <motion.div
+      variants={""}
+      initial="offscreen" 
+      animate="onscreen"
         className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 grid lg:grid-cols-2 lg:items-center gap-10"
       >
         {/* Parallax Background with Overlay */}
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
-          style={{
-            backgroundImage: 'url(/5.webp)',
-          }}
-        >
-          {/* Overlay Effect */}
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-        </div>
+        <motion.div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
+        style={{
+          backgroundImage: 'url(/5.webp)',
+        }}
+        animate={{
+          y: ['0%', '5%'],  
+        }}
+        transition={{
+          y: {
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 10,
+            ease: "easeInOut",
+          },
+        }}
+        variants={containerVariants(0.4)}
+      >
+        {/* Overlay Effect */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+      </motion.div>
+
 
         {/* Left Section (Text) */}
-        <div className="flex flex-col space-y-8 sm:space-y-10 lg:items-center text-center lg:text-left max-w-2xl md:max-w-4xl mx-auto mb-0 lg:mb-0 relative z-10 ml-8">
-        <h1 className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem]">
-  <span className="text-transparent bg-clip-text bg-gradient-to-tr from-gray-100 to-orange-600">
-    Empowering Your Global Journey with Expertise 
-  </span>
-</h1>
-<p className="flex text-gray-100 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-none">
-  As a leading force in the global immigration and consultancy industry, we take pride in our legacy of success. With multiple accolades, including India’s Most Trusted Brand (2022 & 2024) and the prestigious Global Icon Award (2023), our mission at VJC Overseas is clear — to help you turn your international dreams into reality. 
-</p>
+        <motion.div
+          className="flex flex-col space-y-8 sm:space-y-10 lg:items-center text-center lg:text-left max-w-2xl md:max-w-4xl mx-auto mb-0 lg:mb-0 relative z-10 ml-8"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInVariants}
+        >
+          <h1 className="font-semibold uppercase leading-tight text-center text-teal-950 text-4xl sm:text-5xl lg:text-[3.50rem]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-gray-100 to-orange-600">
+              Empowering Your Global Journey with Expertise 
+            </span>
+          </h1>
+          <p className="flex text-gray-100 tracking-tight text-center md:font-medium max-w-xl mx-auto lg:max-w-none">
+            As a leading force in the global immigration and consultancy industry, we take pride in our legacy of success. With multiple accolades, including India’s Most Trusted Brand (2022 & 2024) and the prestigious Global Icon Award (2023), our mission at VJC Overseas is clear — to help you turn your international dreams into reality. 
+          </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-center gap-4 w-full">
             <Link
@@ -43,10 +93,15 @@ const CompOne = () => {
               Book a call
             </Link>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Section (Image and Form) */}
-        <div className="flex aspect-square lg:aspect-auto h-[20rem] tablet:h-[30rem] lg:h-[35rem] relative mt-44 tablet:mt-0 md:mt-6 lg:mt-6 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20">
+        <motion.div
+          className="flex aspect-square lg:aspect-auto h-[20rem] tablet:h-[30rem] lg:h-[35rem] relative mt-44 tablet:mt-0 md:mt-6 lg:mt-6 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInVariants}
+        >
           <div
             className="absolute right-10 lg:right-10 bottom-0 lg:bottom-20  h-[calc(190%-100px)]  lg:h-[calc(80%-10px)] tablet:h-[calc(100%-10px)] w-4/5 rounded-3xl overflow-hidden border-4 border-gray-200 z-30 p-6 bg-white shadow-2xl"
           >
@@ -118,20 +173,11 @@ const CompOne = () => {
             </form>
           </div>
 
-          {/* <div className="w-3/5 h-[80%] rounded-3xl overflow-clip border-8 border-gray-200 z-10 ml-60 mt-10">
-            <Image
-              src="/banner.webp"
-              alt="building plan image"
-              width={1300}
-              height={1300}
-              className="w-full h-full object-cover z-30 transform hover:scale-105 transition-transform"
-            />
-          </div> */}
-
           <div className="absolute bottom-[20rem] lg:-bottom-10 -right-10 w-64 h-64 bg-orange-600 rounded-full opacity-20"></div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
+    </>
   );
 };
 

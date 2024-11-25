@@ -59,11 +59,11 @@ const features = [
  
 const Features = () => {
 return (
-    <section className="py-6">
+    <section className="py-6 bg-cover bg-center" style={{ backgroundImage: "url('/comp-22.webp')" }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
             <div className="flex flex-col gap-5">
                 <div className="space-y-4 max-w-xl">
-                <h1 className="text-3xl font-semibold text-orange-500 dark:text-gray-200 md:text-4xl xl:text-[2.75rem] leading-tight uppercase">
+                <h1 className="text-3xl font-semibold text-orange-600 dark:text-gray-200 md:text-4xl xl:text-[2.75rem] leading-tight uppercase">
     Your Trusted Partner in Navigating Global Visa and Immigration Solutions
 </h1>
                 </div>
